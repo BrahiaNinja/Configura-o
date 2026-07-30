@@ -335,14 +335,58 @@
     .cta-copy .btn{width:100%;margin:12px 0}
     .cta-note{font-size:10px;color:#a6a6b4}
     .launch{
-      position:absolute;right:7%;bottom:10px;width:180px;height:220px
+      position:absolute;
+      right:1.5%;
+      bottom:-16px;
+      width:320px;
+      height:350px;
+      z-index:1;
+      pointer-events:none;
     }
-    .launch .rocket-svg{width:150px;position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);animation-duration:4.6s}
-    .clouds{position:absolute;bottom:0;left:0;right:0;height:70px;filter:drop-shadow(0 0 20px rgba(167,62,255,.24))}
-    .clouds span{position:absolute;background:#ececf4;border-radius:50%}
-    .clouds span:nth-child(1){width:72px;height:72px;left:17px;bottom:0}
-    .clouds span:nth-child(2){width:90px;height:90px;left:56px;bottom:-8px}
-    .clouds span:nth-child(3){width:68px;height:68px;left:116px;bottom:2px}
+    .cta-launch-svg{
+      width:100%;
+      height:100%;
+      display:block;
+      overflow:visible;
+      filter:
+        drop-shadow(0 28px 30px rgba(0,0,0,.48))
+        drop-shadow(0 0 34px rgba(151,49,255,.24));
+    }
+    .cta-rocket-float{
+      transform-origin:205px 164px;
+      animation:ctaRocketFloat 4.6s ease-in-out infinite;
+    }
+    .cta-flame{
+      transform-origin:205px 255px;
+      animation:ctaFlamePulse .72s ease-in-out infinite alternate;
+    }
+    .cta-clouds{
+      transform-origin:center bottom;
+      animation:ctaCloudBreath 5.2s ease-in-out infinite;
+    }
+    .cta-star{
+      animation:ctaStarBlink 2.4s ease-in-out infinite alternate;
+    }
+    .cta-star:nth-of-type(2){animation-delay:.4s}
+    .cta-star:nth-of-type(3){animation-delay:.8s}
+    .cta-star:nth-of-type(4){animation-delay:1.2s}
+
+    @keyframes ctaRocketFloat{
+      0%,100%{transform:translate3d(0,5px,0)}
+      50%{transform:translate3d(0,-10px,0)}
+    }
+    @keyframes ctaFlamePulse{
+      from{transform:scaleY(.88);opacity:.78}
+      to{transform:scaleY(1.1);opacity:1}
+    }
+    @keyframes ctaCloudBreath{
+      0%,100%{transform:scale(1)}
+      50%{transform:scale(1.018)}
+    }
+    @keyframes ctaStarBlink{
+      from{opacity:.2;transform:scale(.72)}
+      to{opacity:1;transform:scale(1.15)}
+    }
 
     /* Footer */
     footer{border-top:1px solid var(--line);padding:42px 0 20px}
@@ -388,7 +432,14 @@
       .section{padding:64px 0}
       .section-head{align-items:flex-start;flex-direction:column}
       .faq-cta{gap:18px}.cta-card{padding:30px;min-height:430px;align-items:flex-start}
-      .cta-copy{max-width:100%}.cta-copy h2{font-size:31px}.launch{right:50%;transform:translateX(50%);bottom:0}
+      .cta-copy{max-width:100%}.cta-copy h2{font-size:31px}
+      .launch{
+        width:270px;
+        height:300px;
+        right:50%;
+        transform:translateX(50%);
+        bottom:-25px;
+      }
       .whatsapp{right:16px;bottom:16px;width:54px;height:54px}
     }
   </style>
@@ -701,58 +752,152 @@
 </svg> Quero um orçamento</a>
           <div class="cta-note">♢ Resposta rápida e atendimento humanizado</div>
         </div>
-        <div class="launch">
-          <svg class="rocket-svg" viewBox="0 0 220 300" aria-hidden="true" focusable="false">
-  <defs>
-    <linearGradient id="bodyGradient" x1="35" y1="35" x2="180" y2="250" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#f4eaff"/>
-      <stop offset=".25" stop-color="#c46cff"/>
-      <stop offset=".65" stop-color="#7d2cff"/>
-      <stop offset="1" stop-color="#42108d"/>
-    </linearGradient>
-    <linearGradient id="finGradient" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#d875ff"/>
-      <stop offset="1" stop-color="#5b1fc5"/>
-    </linearGradient>
-    <radialGradient id="windowGradient" cx="38%" cy="30%" r="75%">
-      <stop offset="0" stop-color="#d8fbff"/>
-      <stop offset=".42" stop-color="#64dfff"/>
-      <stop offset="1" stop-color="#13224e"/>
-    </radialGradient>
-    <linearGradient id="flameGradient" x1=".5" y1="0" x2=".5" y2="1">
-      <stop offset="0" stop-color="#fff5ad"/>
-      <stop offset=".28" stop-color="#ffbc3f"/>
-      <stop offset=".62" stop-color="#ff4f92"/>
-      <stop offset="1" stop-color="#8e31ff" stop-opacity="0"/>
-    </linearGradient>
-    <filter id="purpleGlow" x="-80%" y="-80%" width="260%" height="260%">
-      <feGaussianBlur stdDeviation="7" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-  </defs>
-  <g transform="rotate(31 110 145)">
-    <ellipse cx="110" cy="266" rx="48" ry="17" fill="#8c37ff" opacity=".15" filter="url(#purpleGlow)"/>
-    <g class="rocket-flame">
-      <path d="M89 220c1 28 8 53 21 73 13-20 21-45 21-73Z" fill="url(#flameGradient)" filter="url(#purpleGlow)"/>
-      <path d="M100 222c1 20 4 37 10 50 7-13 10-30 11-50Z" fill="#fff8cf" opacity=".92"/>
-    </g>
-    <g class="rocket-body">
-      <path d="M67 169c-17 11-28 28-34 52l44-17Z" fill="url(#finGradient)" stroke="#d691ff" stroke-opacity=".55" stroke-width="2"/>
-      <path d="M153 169c17 11 28 28 34 52l-44-17Z" fill="url(#finGradient)" stroke="#d691ff" stroke-opacity=".55" stroke-width="2"/>
-      <path d="M110 24c-39 29-58 75-49 143l13 57h72l13-57c9-68-10-114-49-143Z" fill="url(#bodyGradient)" stroke="#f0c6ff" stroke-opacity=".65" stroke-width="3"/>
-      <path d="M110 24c-10 8-20 18-28 30h56c-8-12-18-22-28-30Z" fill="#e3a6ff" opacity=".75"/>
-      <path d="M76 199h68l-7 31H83Z" fill="#4e168f" stroke="#c176ff" stroke-opacity=".5" stroke-width="2"/>
-      <circle cx="110" cy="111" r="34" fill="#291253" stroke="#e2b1ff" stroke-width="5"/>
-      <circle cx="110" cy="111" r="25" fill="url(#windowGradient)" stroke="#6b2bc9" stroke-width="3"/>
-      <ellipse cx="102" cy="102" rx="8" ry="5" fill="white" opacity=".72" transform="rotate(-25 102 102)"/>
-      <path d="M88 65c13-11 28-18 44-20" fill="none" stroke="white" stroke-opacity=".34" stroke-width="4" stroke-linecap="round"/>
-    </g>
-    <circle class="spark" cx="61" cy="246" r="4" fill="#c066ff"/>
-    <circle class="spark" cx="160" cy="255" r="3" fill="#ff72d2" style="animation-delay:.25s"/>
-    <circle class="spark" cx="72" cy="272" r="2.5" fill="#73dfff" style="animation-delay:.5s"/>
-  </g>
-</svg>
-          <div class="clouds"><span></span><span></span><span></span></div>
+        <div class="launch" aria-hidden="true">
+          <svg class="cta-launch-svg" viewBox="0 0 340 420" focusable="false">
+            <defs>
+              <linearGradient id="ctaRocketBody" x1="118" y1="60" x2="270" y2="286" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#fbf2ff"/>
+                <stop offset=".18" stop-color="#dc96ff"/>
+                <stop offset=".46" stop-color="#a742ff"/>
+                <stop offset=".74" stop-color="#6724d9"/>
+                <stop offset="1" stop-color="#2e075f"/>
+              </linearGradient>
+
+              <linearGradient id="ctaRocketShine" x1="152" y1="64" x2="225" y2="254" gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#ffffff" stop-opacity=".88"/>
+                <stop offset=".45" stop-color="#f6c9ff" stop-opacity=".28"/>
+                <stop offset="1" stop-color="#8c35ff" stop-opacity="0"/>
+              </linearGradient>
+
+              <linearGradient id="ctaFin" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#d985ff"/>
+                <stop offset=".5" stop-color="#8734f2"/>
+                <stop offset="1" stop-color="#431087"/>
+              </linearGradient>
+
+              <radialGradient id="ctaWindow" cx="34%" cy="28%" r="78%">
+                <stop offset="0" stop-color="#efffff"/>
+                <stop offset=".24" stop-color="#8ff4ff"/>
+                <stop offset=".58" stop-color="#34bce8"/>
+                <stop offset="1" stop-color="#102152"/>
+              </radialGradient>
+
+              <linearGradient id="ctaFlameOuter" x1=".5" y1="0" x2=".5" y2="1">
+                <stop offset="0" stop-color="#ffffff"/>
+                <stop offset=".18" stop-color="#e8c6ff"/>
+                <stop offset=".48" stop-color="#ba5cff"/>
+                <stop offset=".76" stop-color="#7b2cff" stop-opacity=".72"/>
+                <stop offset="1" stop-color="#5520c7" stop-opacity="0"/>
+              </linearGradient>
+
+              <linearGradient id="ctaFlameInner" x1=".5" y1="0" x2=".5" y2="1">
+                <stop offset="0" stop-color="#fffde8"/>
+                <stop offset=".38" stop-color="#fff4a8"/>
+                <stop offset=".72" stop-color="#ff77db"/>
+                <stop offset="1" stop-color="#9b43ff" stop-opacity="0"/>
+              </linearGradient>
+
+              <radialGradient id="ctaCloud" cx="42%" cy="24%" r="82%">
+                <stop offset="0" stop-color="#ffffff"/>
+                <stop offset=".38" stop-color="#f3ecff"/>
+                <stop offset=".72" stop-color="#d3c2ef"/>
+                <stop offset="1" stop-color="#9278bd"/>
+              </radialGradient>
+
+              <radialGradient id="ctaCloudLight" cx="32%" cy="20%" r="75%">
+                <stop offset="0" stop-color="#ffffff"/>
+                <stop offset=".55" stop-color="#eee6ff"/>
+                <stop offset="1" stop-color="#bba4dc"/>
+              </radialGradient>
+
+              <filter id="ctaPurpleGlow" x="-100%" y="-100%" width="300%" height="300%">
+                <feGaussianBlur stdDeviation="10" result="blur"/>
+                <feMerge>
+                  <feMergeNode in="blur"/>
+                  <feMergeNode in="SourceGraphic"/>
+                </feMerge>
+              </filter>
+
+              <filter id="ctaSoftShadow" x="-80%" y="-80%" width="260%" height="260%">
+                <feDropShadow dx="0" dy="12" stdDeviation="12" flood-color="#120020" flood-opacity=".65"/>
+              </filter>
+
+              <filter id="ctaCloudShadow" x="-60%" y="-60%" width="220%" height="220%">
+                <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#5c27a5" flood-opacity=".32"/>
+              </filter>
+            </defs>
+
+            <!-- Fundo iluminado -->
+            <ellipse cx="212" cy="202" rx="122" ry="150" fill="#7e25ff" opacity=".11" filter="url(#ctaPurpleGlow)"/>
+            <circle class="cta-star" cx="94" cy="112" r="3.2" fill="#dba2ff"/>
+            <circle class="cta-star" cx="286" cy="91" r="2.5" fill="#77e5ff"/>
+            <circle class="cta-star" cx="303" cy="183" r="2.8" fill="#f4b5ff"/>
+            <circle class="cta-star" cx="82" cy="203" r="2.2" fill="#9f5cff"/>
+
+            <!-- Chama fica atrás das nuvens -->
+            <g class="cta-flame" filter="url(#ctaPurpleGlow)">
+              <path d="M181 249C177 291 185 329 204 369C225 330 235 291 229 248Z" fill="url(#ctaFlameOuter)" opacity=".92"/>
+              <path d="M190 252C190 284 195 312 204 340C215 312 220 283 219 251Z" fill="url(#ctaFlameInner)"/>
+              <path d="M198 254C198 276 200 295 204 313C210 294 212 275 211 254Z" fill="#ffffff" opacity=".88"/>
+            </g>
+
+            <!-- Nuvens -->
+            <g class="cta-clouds" filter="url(#ctaCloudShadow)">
+              <ellipse cx="176" cy="363" rx="126" ry="37" fill="#9d7fc4" opacity=".25"/>
+              <circle cx="77" cy="349" r="41" fill="url(#ctaCloud)"/>
+              <circle cx="112" cy="327" r="53" fill="url(#ctaCloudLight)"/>
+              <circle cx="161" cy="340" r="54" fill="url(#ctaCloud)"/>
+              <circle cx="205" cy="320" r="62" fill="url(#ctaCloudLight)"/>
+              <circle cx="255" cy="341" r="53" fill="url(#ctaCloud)"/>
+              <circle cx="292" cy="357" r="36" fill="url(#ctaCloudLight)"/>
+              <ellipse cx="177" cy="365" rx="131" ry="48" fill="url(#ctaCloud)"/>
+              <ellipse cx="184" cy="350" rx="93" ry="49" fill="url(#ctaCloudLight)" opacity=".88"/>
+              <path d="M67 350C107 376 251 380 298 351" fill="none" stroke="#ffffff" stroke-opacity=".18" stroke-width="7" stroke-linecap="round"/>
+            </g>
+
+            <!-- Foguete renderizado depois das nuvens: fica por cima delas -->
+            <g class="cta-rocket-float">
+              <g transform="rotate(25 205 165)" filter="url(#ctaSoftShadow)">
+                <!-- Aletas traseiras -->
+                <path d="M158 205C129 217 111 240 103 276L160 248Z"
+                      fill="url(#ctaFin)" stroke="#dda1ff" stroke-opacity=".65" stroke-width="2.5"/>
+                <path d="M248 205C277 217 295 240 303 276L246 248Z"
+                      fill="url(#ctaFin)" stroke="#dda1ff" stroke-opacity=".65" stroke-width="2.5"/>
+
+                <!-- Corpo -->
+                <path d="M203 44C160 77 141 132 150 205L165 260H241L256 205C265 132 246 77 203 44Z"
+                      fill="url(#ctaRocketBody)" stroke="#f0c8ff" stroke-opacity=".72" stroke-width="3"/>
+
+                <!-- Sombra lateral -->
+                <path d="M227 61C250 96 258 143 249 201L237 247H214C226 205 231 165 229 126C228 100 224 79 217 63Z"
+                      fill="#38106f" opacity=".42"/>
+
+                <!-- Brilho -->
+                <path d="M191 62C167 91 157 132 160 177C162 205 169 229 176 244"
+                      fill="none" stroke="url(#ctaRocketShine)" stroke-width="11" stroke-linecap="round" opacity=".62"/>
+
+                <!-- Ponta -->
+                <path d="M203 44C187 56 174 70 164 86H242C232 70 219 56 203 44Z"
+                      fill="#e8b0ff" opacity=".72"/>
+                <path d="M180 68C194 55 208 50 222 62" fill="none" stroke="#ffffff" stroke-opacity=".44" stroke-width="4" stroke-linecap="round"/>
+
+                <!-- Base -->
+                <path d="M164 239H242L234 267H172Z"
+                      fill="#48108b" stroke="#c472ff" stroke-opacity=".62" stroke-width="2.5"/>
+                <path d="M177 244H229" stroke="#efcaff" stroke-opacity=".38" stroke-width="4" stroke-linecap="round"/>
+
+                <!-- Janela -->
+                <circle cx="203" cy="137" r="39" fill="#291052" stroke="#efcaff" stroke-width="5"/>
+                <circle cx="203" cy="137" r="29" fill="url(#ctaWindow)" stroke="#6d2dcc" stroke-width="4"/>
+                <ellipse cx="193" cy="126" rx="10" ry="6" fill="#ffffff" opacity=".78" transform="rotate(-28 193 126)"/>
+                <circle cx="210" cy="148" r="17" fill="#65dfff" opacity=".12"/>
+
+                <!-- Linhas de acabamento -->
+                <path d="M156 197C184 211 222 212 250 197" fill="none" stroke="#f0caff" stroke-opacity=".26" stroke-width="3"/>
+                <path d="M170 225H236" stroke="#b45cff" stroke-opacity=".35" stroke-width="2.5" stroke-linecap="round"/>
+              </g>
+            </g>
+          </svg>
         </div>
       </div>
     </div>
