@@ -251,7 +251,8 @@
 
     .why-bar{
       border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-      background:rgba(8,8,14,.82)
+      background:rgba(8,8,14,.82);
+      scroll-margin-top:82px
     }
     .why-grid{display:grid;grid-template-columns:1.3fr repeat(4,1fr);align-items:center}
     .why-title{padding:22px 0;font-weight:800;font-size:16px}
@@ -264,9 +265,13 @@
     .section-head p{color:var(--muted)}
 
     /* Portfolio */
+<<<<<<< HEAD
     .portfolio-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
     .portfolio-grid .project{grid-column:span 2}
     .portfolio-grid .project:nth-last-child(-n+2){grid-column:span 3}
+=======
+    .portfolio-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+>>>>>>> ecb945a56b77fee9cdcfcda15043e3eabd1a7d22
     .project{
       background:linear-gradient(180deg,#11111a,#0a0a10);
       border:1px solid var(--line);border-radius:14px;overflow:hidden;
@@ -288,11 +293,16 @@
       linear-gradient(90deg,rgba(12,8,4,.9),rgba(30,14,4,.15)),
       url("https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85") center/cover}
     .manicure{background:
+<<<<<<< HEAD
       linear-gradient(90deg,rgba(54,13,31,.91),rgba(185,72,126,.2)),
       url("https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=85") center/cover}
     .dental{background:
       linear-gradient(90deg,rgba(5,24,21,.92),rgba(64,157,137,.18)),
       url("https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=85") center/cover}
+=======
+      linear-gradient(90deg,rgba(67,18,48,.88),rgba(235,121,174,.18)),
+      url("https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=85") center/cover}
+>>>>>>> ecb945a56b77fee9cdcfcda15043e3eabd1a7d22
     .project-kicker{font-size:10px;font-weight:800;letter-spacing:.12em;position:relative;z-index:2}
     .project-cover h3{font-size:28px;line-height:1.05;max-width:230px;position:absolute;z-index:2;left:25px;bottom:75px;margin:0}
     .project-cover p{position:absolute;z-index:2;left:25px;bottom:34px;font-size:11px;color:#f3f3f6;max-width:220px;margin:0}
@@ -419,8 +429,12 @@
       .menu{display:none}.menu-btn{display:block}.header-cta{display:none}
       .hero-grid{grid-template-columns:1fr}.showcase{min-height:470px}
       .why-grid{grid-template-columns:1fr 1fr}.why-title{grid-column:1/-1}
+<<<<<<< HEAD
       .portfolio-grid{grid-template-columns:1fr 1fr}
       .portfolio-grid .project,.portfolio-grid .project:nth-last-child(-n+2){grid-column:auto}
+=======
+      .portfolio-grid{grid-template-columns:1fr 1fr}.project:last-child{grid-column:auto}
+>>>>>>> ecb945a56b77fee9cdcfcda15043e3eabd1a7d22
       .process-grid{grid-template-columns:1fr 1fr}.step:nth-child(2)::before{display:none}
       .faq-cta{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}
     }
@@ -691,6 +705,7 @@
         <article class="project reveal">
           <div class="project-cover manicure">
             <span class="project-kicker">BELEZA & SOFISTICAÇÃO</span>
+<<<<<<< HEAD
             <h3>Unhas que traduzem sua personalidade</h3>
             <p>Alongamento, cuidado e acabamento de alto nível em cada detalhe.</p>
           </div>
@@ -709,6 +724,14 @@
           <div class="project-meta">
             <div class="project-type">✦ Clínica Odontológica</div>
             <a class="project-link" href="https://portifolioodonto.netlify.app" target="_blank" rel="noopener">Ver projeto ↗</a>
+=======
+            <h3>Unhas impecáveis, elegância em cada detalhe</h3>
+            <p>Alongamentos e cuidados de alto nível para valorizar sua beleza.</p>
+          </div>
+          <div class="project-meta">
+            <div class="project-type">✦ Manicure de Alto Nível</div>
+            <a class="project-link" href="https://portifoliomanicure.netlify.app" target="_blank" rel="noopener noreferrer">Ver projeto ↗</a>
+>>>>>>> ecb945a56b77fee9cdcfcda15043e3eabd1a7d22
           </div>
         </article>
       </div>
