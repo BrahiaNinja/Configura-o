@@ -264,9 +264,7 @@
     .section-head p{color:var(--muted)}
 
     /* Portfolio */
-    .portfolio-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:16px}
-    .portfolio-grid .project{grid-column:span 2}
-    .portfolio-grid .project:nth-last-child(-n+2){grid-column:span 3}
+    .portfolio-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
     .project{
       background:linear-gradient(180deg,#11111a,#0a0a10);
       border:1px solid var(--line);border-radius:14px;overflow:hidden;
@@ -419,8 +417,7 @@
       .menu{display:none}.menu-btn{display:block}.header-cta{display:none}
       .hero-grid{grid-template-columns:1fr}.showcase{min-height:470px}
       .why-grid{grid-template-columns:1fr 1fr}.why-title{grid-column:1/-1}
-      .portfolio-grid{grid-template-columns:1fr 1fr}
-      .portfolio-grid .project,.portfolio-grid .project:nth-last-child(-n+2){grid-column:auto}
+      .portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
       .process-grid{grid-template-columns:1fr 1fr}.step:nth-child(2)::before{display:none}
       .faq-cta{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}
     }
