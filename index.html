@@ -251,7 +251,10 @@
 
     .why-bar{
       border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-      background:rgba(8,8,14,.82)
+      background:rgba(8,8,14,.82);
+      scroll-margin-top:96px;
+      position:relative;
+      z-index:1
     }
     .why-grid{display:grid;grid-template-columns:1.3fr repeat(4,1fr);align-items:center}
     .why-title{padding:22px 0;font-weight:800;font-size:16px}
@@ -993,6 +996,20 @@
 <script>
   const header = document.getElementById("header");
   addEventListener("scroll", () => header.classList.toggle("scrolled", scrollY > 30));
+
+  document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener("click", event => {
+      const targetId = link.getAttribute("href");
+      if(!targetId || targetId === "#") return;
+
+      const target = document.querySelector(targetId);
+      if(!target) return;
+
+      event.preventDefault();
+      target.scrollIntoView({behavior:"smooth", block:"start"});
+      history.replaceState(null, "", targetId);
+    });
+  });
 
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
