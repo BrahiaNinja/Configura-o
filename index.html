@@ -1042,13 +1042,6 @@
             <circle class="cta-star" cx="303" cy="183" r="2.8" fill="#f4b5ff"/>
             <circle class="cta-star" cx="82" cy="203" r="2.2" fill="#9f5cff"/>
 
-            <!-- Chama fica atrás das nuvens -->
-            <g class="cta-flame" filter="url(#ctaPurpleGlow)">
-              <path d="M181 249C177 291 185 329 204 369C225 330 235 291 229 248Z" fill="url(#ctaFlameOuter)" opacity=".92"/>
-              <path d="M190 252C190 284 195 312 204 340C215 312 220 283 219 251Z" fill="url(#ctaFlameInner)"/>
-              <path d="M198 254C198 276 200 295 204 313C210 294 212 275 211 254Z" fill="#ffffff" opacity=".88"/>
-            </g>
-
             <!-- Nuvens -->
             <g class="cta-clouds" filter="url(#ctaCloudShadow)">
               <ellipse cx="176" cy="363" rx="126" ry="37" fill="#9d7fc4" opacity=".25"/>
@@ -1061,6 +1054,15 @@
               <ellipse cx="177" cy="365" rx="131" ry="48" fill="url(#ctaCloud)"/>
               <ellipse cx="184" cy="350" rx="93" ry="49" fill="url(#ctaCloudLight)" opacity=".88"/>
               <path d="M67 350C107 376 251 380 298 351" fill="none" stroke="#ffffff" stroke-opacity=".18" stroke-width="7" stroke-linecap="round"/>
+            </g>
+
+            <!-- Fogo visível saindo do motor e acompanhando a inclinação do foguete -->
+            <g transform="rotate(25 205 165)">
+              <g class="cta-flame" filter="url(#ctaPurpleGlow)">
+                <path d="M176 251C171 291 183 333 204 377C228 333 239 291 232 251Z" fill="url(#ctaFlameOuter)" opacity=".96"/>
+                <path d="M188 252C187 286 194 320 204 351C217 319 222 285 220 252Z" fill="url(#ctaFlameInner)"/>
+                <path d="M197 253C197 278 200 300 204 321C211 299 213 277 211 253Z" fill="#ffffff" opacity=".94"/>
+              </g>
             </g>
 
             <!-- Foguete renderizado depois das nuvens: fica por cima delas -->
