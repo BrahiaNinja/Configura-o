@@ -327,6 +327,46 @@
     }
     .step h3{font-size:16px;margin:0 0 10px}.step p{font-size:12px;line-height:1.6;color:var(--muted);margin:0}
 
+    /* Preços */
+    .pricing-wrap{
+      position:relative;overflow:hidden;
+      background:linear-gradient(180deg,rgba(15,8,28,.78),rgba(5,5,10,.25));
+      border-top:1px solid rgba(170,65,255,.12);border-bottom:1px solid rgba(170,65,255,.12)
+    }
+    .pricing-intro{text-align:center;max-width:720px;margin:0 auto 38px}
+    .pricing-intro h2{font-size:clamp(32px,4vw,50px);line-height:1.08;margin:15px 0 13px}
+    .pricing-intro p{color:var(--muted);font-size:14px;line-height:1.7}
+    .price-card{
+      width:min(100%,650px);margin:auto;padding:34px;border-radius:22px;position:relative;
+      background:linear-gradient(145deg,rgba(31,18,55,.97),rgba(12,12,20,.98));
+      border:1px solid rgba(184,88,255,.4);box-shadow:0 30px 75px rgba(0,0,0,.42),0 0 45px rgba(129,37,255,.1)
+    }
+    .price-badge{display:inline-flex;padding:8px 11px;border-radius:999px;background:#9b2cff;color:#fff;font-size:9px;font-weight:900;letter-spacing:.12em}
+    .price-main{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:25px 0;padding-bottom:25px;border-bottom:1px solid var(--line)}
+    .price-block small{display:block;color:#a9a9b8;font-size:10px;text-transform:uppercase;letter-spacing:.1em;font-weight:800}
+    .price-block strong{display:block;font-size:42px;letter-spacing:-.05em;margin:10px 0 4px}
+    .price-block p{margin:0;color:#b7b7c4;font-size:12px}.price-block.monthly{border-left:1px solid var(--line);padding-left:22px}
+    .price-block.monthly strong{color:#c766ff}.price-block strong span{font-size:13px;letter-spacing:0;color:#aaa;font-weight:600}
+    .price-features{display:grid;grid-template-columns:1fr 1fr;gap:12px 22px;margin:0 0 25px;padding:0;list-style:none}
+    .price-features li{font-size:12px;color:#d5d5df}.price-features li::before{content:"✓";color:#bc59ff;font-weight:900;margin-right:8px}
+    .price-card .btn{width:100%}.price-note{text-align:center;color:#858594;font-size:10px;margin:13px 0 0}
+
+    /* Formulário de análise */
+    .analysis-card{
+      padding:34px;border-radius:25px;border:1px solid rgba(255,255,255,.14);
+      background:radial-gradient(circle at 14% 20%,rgba(133,47,255,.28),transparent 34%),radial-gradient(circle at 96% 90%,rgba(146,178,50,.12),transparent 32%),rgba(19,18,30,.92);
+      box-shadow:0 25px 70px rgba(0,0,0,.36)
+    }
+    .analysis-card h2{font-size:clamp(30px,4vw,45px);margin:0 0 8px;letter-spacing:-.04em}.analysis-card>p{color:#b8b8c7;margin:0 0 20px;font-size:13px}
+    .analysis-form{display:grid;grid-template-columns:1fr 1fr;gap:10px 12px}.form-group{display:grid;gap:7px}.form-group.full{grid-column:1/-1}
+    .form-group label{font-size:12px;color:#dfdfea;font-weight:800}.analysis-form input,.analysis-form select{
+      width:100%;height:48px;padding:0 14px;border-radius:12px;border:1px solid rgba(255,255,255,.14);outline:none;
+      background:#11111b;color:#fff;font:500 13px "Manrope",sans-serif;transition:.2s
+    }
+    .analysis-form input::placeholder{color:#6f6f80}.analysis-form input:focus,.analysis-form select:focus{border-color:#a743ff;box-shadow:0 0 0 3px rgba(155,44,255,.13)}
+    .analysis-form select option{background:#0c071d;color:#fff}.analysis-submit{grid-column:1/-1;width:100%;border:0;cursor:pointer;margin-top:4px}
+    .form-note{grid-column:1/-1;color:#9999a8;font-size:10px;margin:0}.form-error{grid-column:1/-1;color:#ff8ca2;font-size:11px;min-height:14px;margin:0}
+
     /* FAQ + CTA */
     .faq-cta{display:grid;grid-template-columns:.9fr 1.4fr;gap:28px;align-items:stretch}
     .faq-list{display:grid;gap:9px;margin-top:24px}
@@ -454,6 +494,7 @@
         bottom:-25px;
       }
       .whatsapp{right:16px;bottom:16px;width:54px;height:54px}
+      .price-main,.price-features,.analysis-form{grid-template-columns:1fr}.price-block.monthly{border-left:0;border-top:1px solid var(--line);padding:20px 0 0}.analysis-card,.price-card{padding:24px}.form-group.full,.analysis-submit,.form-note,.form-error{grid-column:1}
     }
   </style>
 </head>
@@ -470,6 +511,8 @@
       <a href="#portfolio">Portfólio</a>
       <a href="#beneficios">Benefícios</a>
       <a href="#processo">Como funciona</a>
+      <a href="#precos">Preços</a>
+      <a href="#analise">Análise gratuita</a>
       <a href="#faq">FAQ</a>
     </nav>
     <a class="btn btn-primary header-cta" href="https://wa.me/5511978807788?text=Olá%21%20Gostaria%20de%20saber%20mais%20sobre%20a%20criação%20de%20uma%20Landing%20Page%20para%20meu%20negócio." target="_blank" rel="noopener noreferrer"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -769,6 +812,61 @@
     </div>
   </section>
 
+  <section class="section pricing-wrap" id="precos">
+    <div class="container">
+      <div class="pricing-intro reveal">
+        <span class="eyebrow">Investimento transparente</span>
+        <h2>Uma presença profissional com um valor que <span class="gradient-text">cabe no seu negócio.</span></h2>
+        <p>Você começa com a criação completa da página e mantém toda a estrutura funcionando com uma mensalidade acessível.</p>
+      </div>
+      <article class="price-card reveal">
+        <span class="price-badge">PLANO LANDING PAGE</span>
+        <div class="price-main">
+          <div class="price-block">
+            <small>Criação e configuração</small>
+            <strong>R$ 490</strong>
+            <p>à vista ou 2x de R$ 245</p>
+          </div>
+          <div class="price-block monthly">
+            <small>Manutenção da página</small>
+            <strong>R$ 89,90 <span>/mês</span></strong>
+            <p>para manter tudo no ar e atualizado</p>
+          </div>
+        </div>
+        <ul class="price-features">
+          <li>Design profissional personalizado</li>
+          <li>Página adaptada para celular</li>
+          <li>Integração com WhatsApp</li>
+          <li>Hospedagem e certificado SSL</li>
+          <li>Configuração inicial para o Google</li>
+          <li>Suporte e pequenas atualizações</li>
+        </ul>
+        <a class="btn btn-primary" href="#analise">Quero solicitar uma análise</a>
+        <p class="price-note">O domínio é contratado separadamente. Consulte as condições do plano.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="analise">
+    <div class="container">
+      <div class="analysis-card reveal">
+        <h2>Solicitar análise gratuita</h2>
+        <p>Você preenche e eu indico o melhor ponto de partida para seu negócio. Sem pressão.</p>
+        <form class="analysis-form" id="analysisForm" novalidate>
+          <div class="form-group"><label for="leadName">Nome *</label><input id="leadName" name="name" type="text" placeholder="Seu nome" required></div>
+          <div class="form-group"><label for="leadPhone">WhatsApp *</label><input id="leadPhone" name="phone" type="tel" placeholder="(11) 99999-9999" required></div>
+          <div class="form-group"><label for="leadSegment">Seu segmento (opcional)</label><select id="leadSegment" name="segment"><option>Prefiro não informar agora</option><option>Advocacia</option><option>Odontologia</option><option>Medicina</option><option>Contabilidade</option><option>Construção</option><option>Beleza e Estética</option><option>Academia/Fitness</option><option>Veterinária</option><option>Tecnologia</option><option>Consultoria</option><option>Educação</option><option>Restaurante</option><option>Confeitaria</option><option>Imobiliária</option><option>Outros</option></select></div>
+          <div class="form-group"><label for="leadCity">Cidade (opcional)</label><input id="leadCity" name="city" type="text" placeholder="Sua cidade"></div>
+          <div class="form-group full"><label for="leadService">Qual serviço você procura? *</label><select id="leadService" name="service" required><option value="">Selecione</option><option>Criação de Landing Page</option><option>Reformulação de Landing Page</option><option>Página de vendas</option><option>Site institucional</option><option>Portfólio profissional</option><option>Manutenção e atualizações</option><option>Quero orientação para escolher</option></select></div>
+          <div class="form-group full"><label for="leadGoal">O que você quer resolver agora? *</label><select id="leadGoal" name="goal" required><option value="">Selecione</option><option>Ter uma presença profissional na internet</option><option>Receber mais contatos pelo WhatsApp</option><option>Divulgar meus serviços</option><option>Vender um produto ou serviço específico</option><option>Melhorar um site que já existe</option><option>Aparecer melhor no Google</option></select></div>
+          <p class="form-error" id="formError" aria-live="polite"></p>
+          <button class="btn btn-primary analysis-submit" type="submit">Enviar e falar no WhatsApp</button>
+          <p class="form-note">Após o envio, você será direcionado para o WhatsApp em uma nova aba.</p>
+        </form>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="faq">
     <div class="container faq-cta">
       <div class="reveal">
@@ -967,6 +1065,8 @@
         <a href="#portfolio">Portfólio</a>
         <a href="#beneficios">Benefícios</a>
         <a href="#processo">Como funciona</a>
+        <a href="#precos">Preços</a>
+        <a href="#analise">Análise gratuita</a>
         <a href="#faq">FAQ</a>
       </div>
       <div class="footer-col">
@@ -1030,6 +1130,34 @@
         });
       }
     });
+  });
+
+  const analysisForm = document.getElementById("analysisForm");
+  const leadPhone = document.getElementById("leadPhone");
+  const formError = document.getElementById("formError");
+
+  leadPhone.addEventListener("input", event => {
+    let value = event.target.value.replace(/\D/g, "").slice(0, 11);
+    if(value.length > 6) value = `(${value.slice(0,2)}) ${value.slice(2,7)}-${value.slice(7)}`;
+    else if(value.length > 2) value = `(${value.slice(0,2)}) ${value.slice(2)}`;
+    else if(value.length) value = `(${value}`;
+    event.target.value = value;
+  });
+
+  analysisForm.addEventListener("submit", event => {
+    event.preventDefault();
+    const data = new FormData(analysisForm);
+    const name = data.get("name").trim();
+    const phone = data.get("phone").trim();
+    const service = data.get("service");
+    const goal = data.get("goal");
+    if(!name || phone.replace(/\D/g, "").length < 10 || !service || !goal){
+      formError.textContent = "Preencha nome, WhatsApp, serviço e objetivo para continuar.";
+      return;
+    }
+    formError.textContent = "";
+    const message = `Olá! Gostaria de solicitar uma análise gratuita.%0A%0A*Nome:* ${name}%0A*WhatsApp:* ${phone}%0A*Segmento:* ${data.get("segment")}%0A*Cidade:* ${data.get("city") || "Não informada"}%0A*Serviço:* ${service}%0A*Objetivo:* ${goal}`;
+    window.open(`https://wa.me/5511978807788?text=${encodeURI(message)}`, "_blank", "noopener,noreferrer");
   });
 </script>
 </body>
