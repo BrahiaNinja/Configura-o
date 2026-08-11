@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Landing Pro — Landing Pages de Alta Conversão</title>
+  <title>LandingPro — Landing Pages de Alta Conversão</title>
   <meta name="description" content="Landing pages estratégicas, modernas e responsivas para transformar cliques em clientes." />
 
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
@@ -250,16 +250,25 @@
     .phone .rocket-art{height:95px}.phone .rocket-svg{width:74px;animation-duration:4.8s}
 
     .why-bar{
-      border-top:1px solid var(--line);border-bottom:1px solid var(--line);
-      background:rgba(8,8,14,.82);
-      scroll-margin-top:96px;
-      position:relative;
-      z-index:1
+      padding:78px 0;border-top:1px solid rgba(163,65,255,.14);border-bottom:1px solid rgba(163,65,255,.14);
+      background:radial-gradient(circle at 8% 10%,rgba(117,37,225,.26),transparent 31%),radial-gradient(circle at 96% 55%,rgba(151,190,36,.12),transparent 32%),rgba(8,8,14,.92);
+      scroll-margin-top:96px;position:relative;z-index:1
     }
-    .why-grid{display:grid;grid-template-columns:1.3fr repeat(4,1fr);align-items:center}
-    .why-title{padding:22px 0;font-weight:800;font-size:16px}
-    .why-item{padding:20px;border-left:1px solid var(--line);display:flex;align-items:center;gap:10px;font-size:11px;color:#b6b6c4}
-    .why-item strong{display:block;color:white;font-size:11px;margin-bottom:2px}
+    .why-head{text-align:center;max-width:760px;margin:0 auto 34px}
+    .why-head h2{font-size:clamp(31px,3.7vw,48px);line-height:1.08;letter-spacing:-.04em;margin:14px 0 10px}
+    .why-head p{margin:0;color:#b4b1c0;font-size:14px;line-height:1.65}.why-head p strong{color:#fff}
+    .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    .why-item{
+      min-height:148px;padding:18px 19px;border-radius:21px;position:relative;overflow:hidden;
+      background:linear-gradient(120deg,rgba(49,26,86,.92),rgba(25,24,35,.95));
+      border:1px solid rgba(255,255,255,.14);transition:.25s ease
+    }
+    .why-item:nth-child(2),.why-item:nth-child(5){border-color:rgba(192,226,36,.34)}
+    .why-item:hover{transform:translateY(-4px);border-color:rgba(182,77,255,.55);box-shadow:0 18px 38px rgba(0,0,0,.25)}
+    .why-item-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:15px}
+    .why-icon{font-size:18px;filter:drop-shadow(0 0 8px rgba(185,82,255,.35))}
+    .why-tag{padding:7px 11px;border-radius:999px;border:1px solid rgba(199,232,29,.5);background:rgba(142,170,18,.1);color:#dedbea;font-size:10px;font-weight:800;white-space:nowrap}
+    .why-item h3{color:#fff;font-size:15px;margin:0 0 9px}.why-item p{margin:0;color:#aaa8b7;font-size:12px;line-height:1.55}
 
     /* Titles */
     .section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:28px}
@@ -485,7 +494,7 @@
     @media(max-width:980px){
       .menu{display:none}.menu-btn{display:block}.header-cta{display:none}
       .hero-grid{grid-template-columns:1fr}.showcase{min-height:470px}
-      .why-grid{grid-template-columns:1fr 1fr}.why-title{grid-column:1/-1}
+      .why-grid{grid-template-columns:1fr 1fr}
       .portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
       .process-grid{grid-template-columns:1fr 1fr}.step:nth-child(2)::before{display:none}
       .faq-cta{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}
@@ -501,7 +510,7 @@
       .laptop{width:350px;right:-45px;top:48px}.phone{width:105px;height:220px;right:-8px}
       .fake-hero h3{font-size:22px}.rocket-art{height:120px}.rocket-svg{width:105px}.phone .fake-hero h3{font-size:17px}
       .why-grid,.portfolio-grid,.process-grid,.footer-grid{grid-template-columns:1fr}
-      .why-title{padding-left:0}.why-item{border-left:0;border-top:1px solid var(--line)}
+      .why-bar{padding:64px 0}.why-item{min-height:136px}
       .step::before{display:none}
       .section{padding:64px 0}
       .section-head{align-items:flex-start;flex-direction:column}
@@ -702,12 +711,20 @@
   </section>
 
   <section class="why-bar" id="beneficios">
-    <div class="container why-grid">
-      <div class="why-title">Por que escolher a Landing Pro?</div>
-      <div class="why-item"><span class="mini-icon">◎</span><div><strong>Foco total</strong>em resultados</div></div>
-      <div class="why-item"><span class="mini-icon">✦</span><div><strong>Design moderno</strong>e profissional</div></div>
-      <div class="why-item"><span class="mini-icon">▢</span><div><strong>Comunicação clara</strong>e estratégica</div></div>
-      <div class="why-item"><span class="mini-icon">◉</span><div><strong>Suporte próximo</strong>do início ao fim</div></div>
+    <div class="container">
+      <div class="why-head reveal">
+        <span class="eyebrow">Por que escolher a Landing Pro?</span>
+        <h2>O que você recebe <span class="gradient-text">de verdade</span></h2>
+        <p>Não é apenas “um site”. É uma <strong>estrutura pronta para sua empresa ser encontrada e escolhida.</strong></p>
+      </div>
+      <div class="why-grid">
+        <article class="why-item reveal"><div class="why-item-top"><span class="why-icon">⚡</span><span class="why-tag">Entrega rápida</span></div><h3>Site rápido e adaptado para mobile</h3><p>Uma experiência leve e profissional em celulares, tablets e computadores.</p></article>
+        <article class="why-item reveal"><div class="why-item-top"><span class="why-icon">🧭</span><span class="why-tag">SEO inicial</span></div><h3>Otimizado para o Google</h3><p>Configurações iniciais para ajudar sua empresa a aparecer nas pesquisas do segmento.</p></article>
+        <article class="why-item reveal"><div class="why-item-top"><span class="why-icon">✏️</span><span class="why-tag">Atualização</span></div><h3>Conteúdo sempre atualizado</h3><p>Pequenas alterações de textos, imagens e informações incluídas na mensalidade.</p></article>
+        <article class="why-item reveal"><div class="why-item-top"><span class="why-icon">🔒</span><span class="why-tag">Base técnica</span></div><h3>Hospedagem e certificado SSL</h3><p>Infraestrutura segura para manter sua página disponível todos os dias.</p></article>
+        <article class="why-item reveal"><div class="why-item-top"><span class="why-icon">🧩</span><span class="why-tag">Integrações</span></div><h3>WhatsApp + formulário</h3><p>Contato simples e direto para transformar visitantes em oportunidades de venda.</p></article>
+        <article class="why-item reveal"><div class="why-item-top"><span class="why-icon">🤝</span><span class="why-tag">Suporte humano</span></div><h3>Atendimento próximo</h3><p>Orientação e suporte para você não ficar sozinho depois que a página entrar no ar.</p></article>
+      </div>
     </div>
   </section>
 
@@ -895,7 +912,7 @@
         <div class="closing-copy">
           <span class="closing-kicker">Se você chegou até aqui, já entendeu.</span>
           <h2 id="closing-title">O problema não é seu serviço.<br>É que <span class="purple-line">ninguém te encontra</span> na <span class="lime-line">hora da decisão.</span></h2>
-          <p>A Landing Pro resolve isso com uma página profissional, rápida e pronta para receber contatos. Você envia o essencial. Eu desenvolvo. Você aprova. Sua página entra no ar.</p>
+          <p>A LandingPro resolve isso com uma página profissional, rápida e pronta para receber contatos. Você envia o essencial. Eu desenvolvo. Você aprova. Sua página entra no ar.</p>
           <div class="closing-actions">
             <a class="btn btn-primary" href="#analise">Quero minha análise</a>
             <a class="btn btn-outline" href="#precos">Ver investimento</a>
