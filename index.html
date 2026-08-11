@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LandingPro — Landing Pages de Alta Conversão</title>
+  <title>Landing Pro — Landing Pages de Alta Conversão</title>
   <meta name="description" content="Landing pages estratégicas, modernas e responsivas para transformar cliques em clientes." />
 
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
@@ -442,6 +442,27 @@
       to{opacity:1;transform:scale(1.15)}
     }
 
+    /* Fechamento comercial */
+    .closing-section{padding:28px 0 84px}
+    .closing-card{
+      display:grid;grid-template-columns:1.35fr .85fr;gap:42px;align-items:center;
+      padding:38px 42px;border-radius:24px;position:relative;overflow:hidden;
+      border:1px solid rgba(255,255,255,.15);
+      background:
+        radial-gradient(circle at 5% 10%,rgba(133,47,255,.32),transparent 34%),
+        radial-gradient(circle at 98% 50%,rgba(167,203,44,.16),transparent 42%),
+        linear-gradient(110deg,#21113d 0%,#151426 55%,#202516 100%);
+      box-shadow:0 28px 75px rgba(0,0,0,.4)
+    }
+    .closing-copy{position:relative;z-index:2}.closing-kicker{display:block;color:#bdb7ca;font-size:11px;font-weight:800;margin-bottom:15px}
+    .closing-copy h2{font-size:clamp(32px,4vw,48px);line-height:1.08;letter-spacing:-.045em;margin:0 0 15px}
+    .closing-copy h2 .purple-line{color:#bf5cff}.closing-copy h2 .lime-line{color:#cbea20}
+    .closing-copy p{color:#bdbac7;font-size:13px;line-height:1.65;max-width:650px;margin:0}
+    .closing-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:21px}.closing-actions .btn-outline{min-width:150px}
+    .closing-benefits{display:grid;gap:10px;position:relative;z-index:2}
+    .closing-benefit{padding:16px;border-radius:16px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.14)}
+    .closing-benefit strong{display:block;font-size:13px;margin-bottom:5px}.closing-benefit span{display:block;color:#aaa8b5;font-size:11px}
+
     /* Footer */
     footer{border-top:1px solid var(--line);padding:42px 0 20px}
     .footer-grid{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:60px}
@@ -495,6 +516,7 @@
       }
       .whatsapp{right:16px;bottom:16px;width:54px;height:54px}
       .price-main,.price-features,.analysis-form{grid-template-columns:1fr}.price-block.monthly{border-left:0;border-top:1px solid var(--line);padding:20px 0 0}.analysis-card,.price-card{padding:24px}.form-group.full,.analysis-submit,.form-note,.form-error{grid-column:1}
+      .closing-section{padding-bottom:64px}.closing-card{grid-template-columns:1fr;padding:28px 22px;gap:28px}.closing-actions{display:grid}.closing-actions .btn{width:100%}
     }
   </style>
 </head>
@@ -867,6 +889,27 @@
     </div>
   </section>
 
+  <section class="closing-section" aria-labelledby="closing-title">
+    <div class="container">
+      <div class="closing-card reveal">
+        <div class="closing-copy">
+          <span class="closing-kicker">Se você chegou até aqui, já entendeu.</span>
+          <h2 id="closing-title">O problema não é seu serviço.<br>É que <span class="purple-line">ninguém te encontra</span> na <span class="lime-line">hora da decisão.</span></h2>
+          <p>A Landing Pro resolve isso com uma página profissional, rápida e pronta para receber contatos. Você envia o essencial. Eu desenvolvo. Você aprova. Sua página entra no ar.</p>
+          <div class="closing-actions">
+            <a class="btn btn-primary" href="#analise">Quero minha análise</a>
+            <a class="btn btn-outline" href="#precos">Ver investimento</a>
+          </div>
+        </div>
+        <div class="closing-benefits">
+          <div class="closing-benefit"><strong>Sem complicação</strong><span>Você não precisa entender de site.</span></div>
+          <div class="closing-benefit"><strong>WhatsApp pronto</strong><span>Seu possível cliente fala direto com você.</span></div>
+          <div class="closing-benefit"><strong>Você aprova antes</strong><span>Nada vai ao ar sem o seu OK.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="faq">
     <div class="container faq-cta">
       <div class="reveal">
@@ -1050,6 +1093,7 @@
       </div>
     </div>
   </section>
+
 </main>
 
 <footer>
