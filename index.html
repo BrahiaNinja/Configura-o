@@ -98,6 +98,13 @@
       vertical-align:-3px;
       margin-right:6px;
     }
+    .footer-col .instagram-icon{
+      width:16px;
+      height:16px;
+      display:inline-block;
+      vertical-align:-3px;
+      margin-right:6px;
+    }
     .btn-outline{border-color:var(--line);background:rgba(255,255,255,.025);color:#fff}
     .btn-outline:hover{background:rgba(255,255,255,.06);border-color:rgba(168,65,255,.38)}
 
@@ -383,6 +390,24 @@
     .analysis-form select option{background:#0c071d;color:#fff}.analysis-submit{grid-column:1/-1;width:100%;border:0;cursor:pointer;margin-top:4px}
     .form-note{grid-column:1/-1;color:#9999a8;font-size:10px;margin:0}.form-error{grid-column:1/-1;color:#ff8ca2;font-size:11px;min-height:14px;margin:0}
 
+    /* Avaliações */
+    .reviews-section{padding:18px 0 84px;overflow:hidden}
+    .reviews-head{text-align:center;max-width:720px;margin:0 auto 34px}
+    .reviews-head h2{font-size:clamp(31px,4vw,48px);line-height:1.08;letter-spacing:-.045em;margin:14px 0 12px}
+    .reviews-head p{color:var(--muted);font-size:13px;line-height:1.7;margin:0}
+    .reviews-carousel{position:relative}.reviews-viewport{overflow:hidden;border-radius:22px}
+    .reviews-track{display:flex;gap:18px;transition:transform .65s cubic-bezier(.22,.61,.36,1);will-change:transform}
+    .review-card{flex:0 0 calc((100% - 36px)/3);min-width:0;padding:25px;border-radius:20px;background:linear-gradient(145deg,rgba(30,20,48,.98),rgba(14,14,23,.98));border:1px solid rgba(182,84,255,.23);box-shadow:0 18px 48px rgba(0,0,0,.25)}
+    .review-stars{color:#cbea20;letter-spacing:3px;font-size:14px;margin-bottom:17px}
+    .review-card blockquote{margin:0 0 22px;color:#dfdfea;font-size:13px;line-height:1.75}
+    .review-person{display:flex;align-items:center;gap:12px;border-top:1px solid rgba(255,255,255,.08);padding-top:17px}
+    .review-avatar{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#a72cff,#6424da);font-size:13px;font-weight:900;box-shadow:0 8px 22px rgba(128,38,226,.3)}
+    .review-person strong{display:block;font-size:12px;margin-bottom:4px}.review-person span{display:block;color:#9292a1;font-size:10px}
+    .reviews-controls{display:flex;justify-content:center;align-items:center;gap:15px;margin-top:24px}
+    .review-arrow{width:43px;height:43px;border-radius:50%;border:1px solid rgba(181,84,255,.36);background:#12121c;color:#fff;font-size:21px;cursor:pointer;transition:.2s}
+    .review-arrow:hover{background:#9b2cff;border-color:#9b2cff;transform:translateY(-2px)}
+    .reviews-dots{display:flex;gap:7px}.review-dot{width:7px;height:7px;padding:0;border:0;border-radius:99px;background:#4f4f5d;cursor:pointer;transition:.25s}.review-dot.active{width:24px;background:#b84dff}
+
     /* FAQ + CTA */
     .faq-cta{display:grid;grid-template-columns:.9fr 1.4fr;gap:28px;align-items:stretch}
     .faq-list{display:grid;gap:9px;margin-top:24px}
@@ -507,6 +532,7 @@
       .project{padding:28px 20px 24px}.device-stage{height:230px;max-width:420px}.mock-laptop{height:205px}.mock-phone{height:170px}
       .process-grid{grid-template-columns:1fr 1fr}.step:nth-child(2)::before{display:none}
       .faq-cta{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}
+      .review-card{flex-basis:calc((100% - 18px)/2)}
     }
     @media(max-width:640px){
       .container{width:min(100% - 28px,var(--max))}
@@ -541,6 +567,7 @@
       .whatsapp{right:16px;bottom:16px;width:54px;height:54px}
       .price-main,.price-features,.analysis-form{grid-template-columns:1fr}.price-block.monthly{border-left:0;border-top:1px solid var(--line);padding:20px 0 0}.analysis-card,.price-card{padding:24px}.form-group.full,.analysis-submit,.form-note,.form-error{grid-column:1}
       .closing-section{padding-bottom:64px}.closing-card{grid-template-columns:1fr;padding:28px 22px;gap:28px}.closing-actions{display:grid}.closing-actions .btn{width:100%}
+      .reviews-section{padding:4px 0 64px}.reviews-head{margin-bottom:25px}.review-card{flex-basis:100%;padding:23px}.reviews-track{gap:14px}
     }
   </style>
 </head>
@@ -914,6 +941,27 @@
     </div>
   </section>
 
+  <section class="reviews-section" id="avaliacoes" aria-labelledby="reviews-title">
+    <div class="container">
+      <div class="reviews-head reveal">
+        <span class="eyebrow">Experiências com a Landing Pro</span>
+        <h2 id="reviews-title">Projetos que geram <span class="gradient-text">boas impressões</span></h2>
+        <p>Feedbacks inspirados nos segmentos apresentados em nosso portfólio.</p>
+      </div>
+      <div class="reviews-carousel reveal" aria-roledescription="carrossel" aria-label="Avaliações de projetos">
+        <div class="reviews-viewport"><div class="reviews-track" id="reviewsTrack">
+          <article class="review-card"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>“A página deixou a apresentação do salão muito mais profissional. Agora as clientes encontram os serviços e chamam no WhatsApp com facilidade.”</blockquote><div class="review-person"><div class="review-avatar">CS</div><div><strong>Camila Souza</strong><span>Salão de beleza</span></div></div></article>
+          <article class="review-card"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>“O cardápio ficou bonito, rápido e simples de navegar pelo celular. O acesso aos pedidos ficou muito mais direto para nossos clientes.”</blockquote><div class="review-person"><div class="review-avatar">RM</div><div><strong>Rafael Martins</strong><span>Restaurante</span></div></div></article>
+          <article class="review-card"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>“Conseguimos transmitir mais confiança já no primeiro contato. O visual ficou moderno, acolhedor e alinhado ao atendimento da clínica.”</blockquote><div class="review-person"><div class="review-avatar">DP</div><div><strong>Dra. Paula</strong><span>Clínica odontológica</span></div></div></article>
+          <article class="review-card"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>“Meus doces ganharam uma vitrine à altura do meu trabalho. As fotos, os produtos e o botão de pedido ficaram organizados do jeito que eu queria.”</blockquote><div class="review-person"><div class="review-avatar">AF</div><div><strong>Ana Ferreira</strong><span>Confeitaria</span></div></div></article>
+          <article class="review-card"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>“O site ficou elegante e objetivo, sem excesso de informação. Hoje consigo apresentar meus serviços com muito mais autoridade.”</blockquote><div class="review-person"><div class="review-avatar">LM</div><div><strong>Lucas Mendes</strong><span>Advocacia</span></div></div></article>
+          <article class="review-card"><div class="review-stars" aria-label="5 de 5 estrelas">★★★★★</div><blockquote>“A página ficou linda no computador e no celular. Minhas clientes conseguem ver meu trabalho e agendar em poucos cliques.”</blockquote><div class="review-person"><div class="review-avatar">FR</div><div><strong>Fabiana Rodrigues</strong><span>Manicure</span></div></div></article>
+        </div></div>
+        <div class="reviews-controls"><button class="review-arrow" id="reviewPrev" type="button" aria-label="Avaliação anterior">‹</button><div class="reviews-dots" id="reviewsDots" aria-label="Selecionar avaliação"></div><button class="review-arrow" id="reviewNext" type="button" aria-label="Próxima avaliação">›</button></div>
+      </div>
+    </div>
+  </section>
+
   <section class="closing-section" aria-labelledby="closing-title">
     <div class="container">
       <div class="closing-card reveal">
@@ -1153,6 +1201,7 @@
         <a href="https://wa.me/5511978807788?text=Olá%21%20Gostaria%20de%20saber%20mais%20sobre%20a%20criação%20de%20uma%20Landing%20Page%20para%20meu%20negócio." target="_blank" rel="noopener noreferrer"><svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
   <path fill="currentColor" d="M12.04 2a9.84 9.84 0 0 0-8.47 14.84L2 22l5.3-1.52A9.95 9.95 0 1 0 12.04 2Zm0 17.99a8.05 8.05 0 0 1-4.1-1.12l-.29-.17-3.14.9.93-3.05-.19-.31A7.97 7.97 0 1 1 12.04 20Zm4.42-5.96c-.24-.12-1.43-.71-1.65-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.01-.37-1.93-1.19-.71-.64-1.19-1.42-1.33-1.66-.14-.24-.02-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.8-.2-.47-.4-.41-.55-.42h-.47c-.16 0-.42.06-.65.3-.22.24-.85.83-.85 2.03 0 1.19.87 2.35.99 2.51.12.16 1.71 2.61 4.15 3.66.58.25 1.03.4 1.39.51.58.19 1.11.16 1.53.1.47-.07 1.43-.59 1.64-1.16.2-.57.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28Z"/>
 </svg> (11) 97880-7788</a>
+        <a href="https://www.instagram.com/pontodeinflacao/" target="_blank" rel="noopener noreferrer" aria-label="Instagram @pontodeinflacao"><svg class="instagram-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5Zm8.75 1.5a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Z"/></svg>@pontodeinflacao</a>
         <a href="mailto:brahiansilvaoficial@gmail.com">✉ brahiansilvaoficial@gmail.com</a>
         <p>⌖ São Paulo - SP</p>
       </div>
@@ -1231,6 +1280,40 @@
     const message = `Olá! Gostaria de solicitar uma análise gratuita.%0A%0A*Nome:* ${name}%0A*WhatsApp:* ${phone}%0A*Segmento:* ${data.get("segment")}%0A*Cidade:* ${data.get("city") || "Não informada"}%0A*Serviço:* ${service}%0A*Objetivo:* ${goal}`;
     window.open(`https://wa.me/5511978807788?text=${encodeURI(message)}`, "_blank", "noopener,noreferrer");
   });
+
+  const reviewsTrack = document.getElementById("reviewsTrack");
+  const reviewCards = [...reviewsTrack.children];
+  const reviewsDots = document.getElementById("reviewsDots");
+  let reviewIndex = 0;
+  let reviewTimer;
+  reviewCards.forEach((_, index) => {
+    const dot = document.createElement("button");
+    dot.className = "review-dot"; dot.type = "button";
+    dot.setAttribute("aria-label", `Ir para avaliação ${index + 1}`);
+    dot.addEventListener("click", () => { reviewIndex = index; updateReviews(); restartReviews(); });
+    reviewsDots.appendChild(dot);
+  });
+  function visibleReviews(){ return innerWidth <= 640 ? 1 : innerWidth <= 980 ? 2 : 3; }
+  function updateReviews(){
+    const maxIndex = Math.max(0, reviewCards.length - visibleReviews());
+    reviewIndex = Math.min(Math.max(reviewIndex, 0), maxIndex);
+    const cardWidth = reviewCards[0].getBoundingClientRect().width;
+    const gap = parseFloat(getComputedStyle(reviewsTrack).gap) || 0;
+    reviewsTrack.style.transform = `translateX(-${reviewIndex * (cardWidth + gap)}px)`;
+    [...reviewsDots.children].forEach((dot, index) => { dot.classList.toggle("active", index === reviewIndex); dot.hidden = index > maxIndex; });
+  }
+  function moveReviews(direction){
+    const maxIndex = Math.max(0, reviewCards.length - visibleReviews());
+    reviewIndex = direction > 0 ? (reviewIndex >= maxIndex ? 0 : reviewIndex + 1) : (reviewIndex <= 0 ? maxIndex : reviewIndex - 1);
+    updateReviews();
+  }
+  function restartReviews(){ clearInterval(reviewTimer); reviewTimer = setInterval(() => moveReviews(1), 5000); }
+  document.getElementById("reviewPrev").addEventListener("click", () => { moveReviews(-1); restartReviews(); });
+  document.getElementById("reviewNext").addEventListener("click", () => { moveReviews(1); restartReviews(); });
+  reviewsTrack.closest(".reviews-carousel").addEventListener("mouseenter", () => clearInterval(reviewTimer));
+  reviewsTrack.closest(".reviews-carousel").addEventListener("mouseleave", restartReviews);
+  addEventListener("resize", updateReviews);
+  updateReviews(); restartReviews();
 </script>
 </body>
 </html>
