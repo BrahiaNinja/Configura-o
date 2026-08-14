@@ -404,6 +404,7 @@
     .cta-copy p{font-size:13px;line-height:1.6;color:#c0c0cb}
     .cta-copy .btn{width:100%;margin:12px 0}
     .cta-note{font-size:10px;color:#a6a6b4}
+    .mobile-cta-btn{display:none}
     .launch{
       position:absolute;
       right:1.5%;
@@ -513,24 +514,29 @@
       .hero-copy h1{font-size:43px}
       .feature-row{display:grid;gap:12px}
       .hero-actions{display:grid}.btn{width:100%}
-      .showcase{min-height:355px}
-      .glow-ring{width:280px;height:280px;right:0}
-      .laptop{width:350px;right:-45px;top:48px}.phone{width:105px;height:220px;right:-8px}
+      .showcase{min-height:335px;overflow:visible}
+      .glow-ring{width:260px;height:260px;right:auto;left:50%;top:18px;transform:translateX(-50%)}
+      .laptop{width:min(305px,88vw);right:auto;left:50%;top:55px;transform:translateX(-54%) perspective(1300px) rotateY(-4deg) rotateX(2deg)}
+      .phone{width:88px;height:188px;right:3%;bottom:20px;border-width:6px;border-radius:23px}
+      .phone::before{width:42px;height:10px;top:5px}.phone .fake-page{padding:23px 10px 10px}
       .fake-hero h3{font-size:22px}.rocket-art{height:120px}.rocket-svg{width:105px}.phone .fake-hero h3{font-size:17px}
       .why-grid,.portfolio-grid,.process-grid,.footer-grid{grid-template-columns:1fr}
       .project{padding:27px 18px 23px}.project-title{margin-bottom:22px}.device-stage{height:210px;max-width:400px}.mock-laptop{width:94%;height:188px;bottom:13px}.mock-laptop-screen{border-width:8px;border-bottom-width:11px}.mock-phone{right:-1%;bottom:2px;width:27%;height:158px;border-width:6px;border-radius:21px}.project-link{min-width:88%;font-size:14px}
       .why-bar{padding:64px 0}.why-item{min-height:136px}
+      .step{display:grid;grid-template-columns:44px 48px 1fr;column-gap:10px;align-items:center;padding-left:0}
       .step::before{display:none}
+      .step-number{grid-column:1}.step-icon{grid-column:2;margin:0}.step h3,.step p{grid-column:1/-1}.step h3{margin-top:14px}
       .section{padding:64px 0}
       .section-head{align-items:flex-start;flex-direction:column}
-      .faq-cta{gap:18px}.cta-card{padding:30px;min-height:430px;align-items:flex-start}
-      .cta-copy{max-width:100%}.cta-copy h2{font-size:31px}
+      .faq-cta{gap:18px}.cta-card{padding:30px 30px 88px;min-height:500px;align-items:flex-start}
+      .cta-copy{max-width:100%}.cta-copy h2{font-size:31px}.cta-copy>.btn{display:none}
+      .mobile-cta-btn{display:flex;position:absolute;left:30px;right:30px;bottom:20px;width:auto;z-index:5}
       .launch{
         width:270px;
         height:300px;
         right:50%;
         transform:translateX(50%);
-        bottom:-25px;
+        bottom:40px;
       }
       .whatsapp{right:16px;bottom:16px;width:54px;height:54px}
       .price-main,.price-features,.analysis-form{grid-template-columns:1fr}.price-block.monthly{border-left:0;border-top:1px solid var(--line);padding:20px 0 0}.analysis-card,.price-card{padding:24px}.form-group.full,.analysis-submit,.form-note,.form-error{grid-column:1}
@@ -865,8 +871,8 @@
         <div class="price-main">
           <div class="price-block">
             <small>Criação e configuração</small>
-            <strong>R$ 490,00</strong>
-            <p>à vista ou 2x de R$ 245,00</p>
+            <strong>R$ 490</strong>
+            <p>à vista ou 2x de R$ 245</p>
           </div>
           <div class="price-block monthly">
             <small>Manutenção da página</small>
@@ -1111,6 +1117,7 @@
             </g>
           </svg>
         </div>
+        <a class="btn btn-primary mobile-cta-btn" href="https://wa.me/5511978807788?text=Olá%21%20Gostaria%20de%20solicitar%20um%20orçamento%20para%20uma%20Landing%20Page." target="_blank" rel="noopener noreferrer"><span aria-hidden="true">◉</span> Quero um orçamento</a>
       </div>
     </div>
   </section>
