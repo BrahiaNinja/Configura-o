@@ -275,45 +275,52 @@
     .section-head h2,.split-title h2{font-size:clamp(30px,3.2vw,45px);line-height:1.14;letter-spacing:-.035em;margin:13px 0 0}
     .section-head p{color:var(--muted)}
 
-    /* Portfolio */
-    .portfolio-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    /* Portfolio — vitrine em mockups desktop + mobile */
+    #portfolio{background:transparent;color:var(--text)}
+    #portfolio .eyebrow{color:#c57cff;background:rgba(153,44,255,.07);border-color:rgba(176,74,255,.35)}
+    #portfolio .btn-outline{color:#fff;border-color:var(--line);background:rgba(255,255,255,.025)}
+    .portfolio-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
     .project{
-      background:linear-gradient(180deg,#11111a,#0a0a10);
-      border:1px solid var(--line);border-radius:14px;overflow:hidden;
-      box-shadow:0 18px 50px rgba(0,0,0,.27);transition:.28s ease
+      min-width:0;background:linear-gradient(180deg,#11111a,#0a0a10);border:1px solid var(--line);border-radius:16px;
+      padding:28px 18px 23px;box-shadow:0 18px 50px rgba(0,0,0,.27);
+      transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease
     }
-    .project:hover{transform:translateY(-6px);border-color:rgba(168,63,255,.42)}
-    .project-cover{height:315px;position:relative;overflow:hidden;padding:25px}
-    .project-cover::after{
-      content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.72),transparent 55%);
-      pointer-events:none
-    }
-    .salon{background:
-      linear-gradient(90deg,rgba(42,17,0,.92),rgba(65,29,7,.2)),
-      url("https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=900&q=85") center/cover}
-    .cake{background:
-      linear-gradient(90deg,rgba(255,148,181,.88),rgba(255,199,210,.24)),
-      url("https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=900&q=85") center/cover}
-    .restaurant{background:
-      linear-gradient(90deg,rgba(12,8,4,.9),rgba(30,14,4,.15)),
-      url("https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=900&q=85") center/cover}
-    .manicure{background:
-      linear-gradient(90deg,rgba(54,13,31,.91),rgba(185,72,126,.2)),
-      url("https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=900&q=85") center/cover}
-    .dental{background:
-      linear-gradient(90deg,rgba(5,24,21,.92),rgba(64,157,137,.18)),
-      url("https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=900&q=85") center/cover}
-
-    .project-cover.advocacia {background:
-    linear-gradient(135deg,rgba(5, 12, 18, 0.92),rgba(5, 12, 18, 0.45)),
-    url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=85"); background-size: cover; background-position: center; background-repeat: no-repeat;}
-    
-    .project-kicker{font-size:10px;font-weight:800;letter-spacing:.12em;position:relative;z-index:2}
-    .project-cover h3{font-size:28px;line-height:1.05;max-width:230px;position:absolute;z-index:2;left:25px;bottom:75px;margin:0}
-    .project-cover p{position:absolute;z-index:2;left:25px;bottom:34px;font-size:11px;color:#f3f3f6;max-width:220px;margin:0}
-    .project-meta{height:64px;padding:0 18px;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line)}
-    .project-type{font-size:13px;font-weight:800;display:flex;align-items:center;gap:8px}
-    .project-link{font-size:12px;font-weight:800;color:white;background:linear-gradient(135deg,#a72cff,#6b28e9);padding:10px 14px;border-radius:8px}
+    .project:hover{transform:translateY(-7px);box-shadow:0 24px 55px rgba(0,0,0,.4);border-color:rgba(168,63,255,.42)}
+    .project-title{margin:0 0 22px;text-align:center;font-size:clamp(15px,1.35vw,19px);line-height:1.2;letter-spacing:.045em;text-transform:uppercase;color:#fff;font-weight:900}
+    .device-stage{height:210px;position:relative;margin:0 auto 23px;max-width:360px;overflow:visible;isolation:isolate}
+    .device-stage::before{content:"";position:absolute;width:76%;aspect-ratio:1;left:46%;top:53%;transform:translate(-50%,-50%);border:2px solid rgba(150,43,255,.48);border-radius:50%;box-shadow:0 0 55px rgba(136,36,255,.28),inset 0 0 35px rgba(136,36,255,.1);z-index:-1}
+    .device-stage::after{content:"";position:absolute;inset:20% 12% 8%;background:radial-gradient(circle,rgba(128,34,235,.3),transparent 66%);filter:blur(20px);z-index:-2}
+    .mock-laptop{position:absolute;left:48%;bottom:13px;transform:translateX(-52%);width:94%;height:188px;z-index:1;filter:drop-shadow(0 18px 18px rgba(0,0,0,.45))}
+    .mock-laptop-screen{position:absolute;inset:0 4.5% 15px;border:8px solid #25252d;border-bottom-width:11px;border-radius:14px 14px 4px 4px;background:#08080d;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+    .mock-laptop::before{content:"";position:absolute;left:50%;bottom:11px;transform:translateX(-50%);width:11%;height:4px;border-radius:0 0 5px 5px;background:#44454d;z-index:2}
+    .mock-laptop::after{content:"";position:absolute;left:0;right:0;bottom:0;height:19px;border-radius:2px 2px 16px 16px;background:linear-gradient(180deg,#2b2c33 0%,#18191e 68%,#090a0d 100%);clip-path:polygon(3% 0,97% 0,100% 68%,97% 100%,3% 100%,0 68%)}
+    .mock-phone{position:absolute;right:-1%;bottom:2px;width:28%;height:158px;border:6px solid #292932;border-radius:22px;background:#17171d;padding:3px;z-index:3;transform:rotate(2deg);transform-origin:50% 100%;box-shadow:0 18px 26px rgba(0,0,0,.55)}
+    .mock-phone::before{content:"";position:absolute;top:4px;left:50%;transform:translateX(-50%);width:43%;height:8px;border-radius:0 0 10px 10px;background:#17171d;z-index:4}
+    .mock-phone-screen{height:100%;border-radius:17px;overflow:hidden;background:#08080d;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
+    .site-preview{display:block;width:100%;height:100%;object-fit:cover;object-position:top center;background:linear-gradient(135deg,#17111f,#2b123e);filter:saturate(1.04) contrast(1.03)}
+    .site-preview.preview-focus{object-fit:cover;object-position:center 58%}
+    .site-preview.preview-text-bottom{object-fit:cover;object-position:center bottom}
+    .site-preview.preview-left{object-fit:cover;object-position:top left}
+    .local-preview{position:relative;width:100%;height:100%;overflow:hidden;padding:13px 15px;color:#fff;font-family:"Manrope",sans-serif}
+    .local-preview::before{content:"";position:absolute;width:54%;aspect-ratio:1;right:-8%;bottom:-32%;border-radius:50%;filter:blur(2px);opacity:.95}
+    .preview-nav{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:7px}
+    .preview-nav b{font-size:9px;letter-spacing:-.02em}.preview-nav span{opacity:.72;white-space:nowrap}
+    .preview-content{position:relative;z-index:2;width:58%;height:calc(100% - 22px);display:flex;align-items:flex-start;justify-content:center;flex-direction:column;gap:8px}
+    .preview-content small{font-size:6px;font-weight:900;letter-spacing:.13em}
+    .preview-content strong{font-family:Georgia,serif;font-size:25px;line-height:.92;letter-spacing:-.035em}
+    .preview-content em{font-style:normal;font-size:6px;line-height:1.45;opacity:.76}
+    .preview-content i{display:inline-flex;padding:6px 9px;border-radius:999px;font-size:6px;font-style:normal;font-weight:900;color:#fff}
+    .preview-symbol{position:absolute;z-index:2;right:8%;bottom:10%;font-size:56px;filter:drop-shadow(0 15px 14px rgba(0,0,0,.3));transform:rotate(-7deg)}
+    .confectionery-preview{background:radial-gradient(circle at 83% 30%,rgba(255,194,210,.4),transparent 25%),linear-gradient(135deg,#3f1628,#8d3152 58%,#2d101f)}
+    .confectionery-preview::before{background:linear-gradient(145deg,#ffcad7,#d66a8d);box-shadow:0 0 35px rgba(255,154,185,.45)}
+    .confectionery-preview .preview-content small{color:#ffc2d2}.confectionery-preview .preview-content strong{color:#fff5f7}.confectionery-preview .preview-content i{background:#e45182}
+    .manicure-preview{background:radial-gradient(circle at 78% 25%,rgba(255,192,218,.32),transparent 28%),linear-gradient(135deg,#23121c,#6b2948 58%,#170d13)}
+    .manicure-preview::before{background:linear-gradient(145deg,#f8bfd7,#b84d7b);box-shadow:0 0 35px rgba(233,92,154,.4)}
+    .manicure-preview .preview-content small{color:#ffbad7}.manicure-preview .preview-content strong{color:#fff4f8}.manicure-preview .preview-content i{background:#c74179}
+    .mock-phone .local-preview{padding:15px 8px 8px}.mock-phone .preview-nav span{display:none}.mock-phone .preview-nav b{font-size:7px}.mock-phone .preview-content{width:88%;height:calc(100% - 18px);gap:6px}.mock-phone .preview-content small{font-size:4px}.mock-phone .preview-content strong{font-size:16px}.mock-phone .preview-content em{font-size:4px}.mock-phone .preview-content i{padding:4px 6px;font-size:4px}.mock-phone .preview-symbol{font-size:29px;right:5%;bottom:4%;opacity:.92}
+    .project-meta{display:flex;align-items:center;justify-content:center}
+    .project-link{min-width:78%;text-align:center;font-size:16px;font-weight:700;color:#fff;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.32);padding:11px 22px;border-radius:999px;transition:.22s ease}
+    .project-link:hover{color:#fff;background:linear-gradient(135deg,#a72cff,#6b28e9);border-color:transparent;transform:translateY(-2px)}
 
     /* Process */
     .process{padding-top:28px}
@@ -496,6 +503,7 @@
       .hero-grid{grid-template-columns:1fr}.showcase{min-height:470px}
       .why-grid{grid-template-columns:1fr 1fr}
       .portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+      .project{padding:28px 20px 24px}.device-stage{height:230px;max-width:420px}.mock-laptop{height:205px}.mock-phone{height:170px}
       .process-grid{grid-template-columns:1fr 1fr}.step:nth-child(2)::before{display:none}
       .faq-cta{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}
     }
@@ -510,6 +518,7 @@
       .laptop{width:350px;right:-45px;top:48px}.phone{width:105px;height:220px;right:-8px}
       .fake-hero h3{font-size:22px}.rocket-art{height:120px}.rocket-svg{width:105px}.phone .fake-hero h3{font-size:17px}
       .why-grid,.portfolio-grid,.process-grid,.footer-grid{grid-template-columns:1fr}
+      .project{padding:27px 18px 23px}.project-title{margin-bottom:22px}.device-stage{height:210px;max-width:400px}.mock-laptop{width:94%;height:188px;bottom:13px}.mock-laptop-screen{border-width:8px;border-bottom-width:11px}.mock-phone{right:-1%;bottom:2px;width:27%;height:158px;border-width:6px;border-radius:21px}.project-link{min-width:88%;font-size:14px}
       .why-bar{padding:64px 0}.why-item{min-height:136px}
       .step::before{display:none}
       .section{padding:64px 0}
@@ -740,77 +749,70 @@
 
       <div class="portfolio-grid">
         <article class="project reveal">
-          <div class="project-cover salon">
-            <span class="project-kicker">BELEZA & ESTILO</span>
-            <h3>Realce sua beleza com confiança</h3>
-            <p>Cuidado e excelência para realçar o que você tem de melhor.</p>
+          <h3 class="project-title">Salão de Beleza</h3>
+          <div class="device-stage" aria-hidden="true">
+            <div class="mock-laptop"><div class="mock-laptop-screen"><img class="site-preview" src="https://image.thum.io/get/wait/8/width/1600/crop/950/https://portifoliosalao.netlify.app/?portfolioPreview=20260814" alt="Prévia do projeto Salão de Beleza" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&amp;fit=crop&amp;w=1200&amp;q=88'"></div></div>
+            <div class="mock-phone"><div class="mock-phone-screen"><img class="site-preview" src="https://image.thum.io/get/wait/8/width/780/crop/1400/viewportWidth/390/https://portifoliosalao.netlify.app/?portfolioMobile=20260814" alt="Prévia mobile do projeto Salão de Beleza" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&amp;fit=crop&amp;w=700&amp;q=88'"></div></div>
           </div>
           <div class="project-meta">
-            <div class="project-type">♔ Salão de Beleza</div>
-            <a class="project-link" href="https://portifoliosalao.netlify.app" target="_blank">Ver projeto ↗</a>
+            <a class="project-link" href="https://portifoliosalao.netlify.app" target="_blank" rel="noopener">Beleza e Estilo ↗</a>
           </div>
         </article>
 
         <article class="project reveal">
-          <div class="project-cover cake">
-            <span class="project-kicker">DOCE ENCANTO</span>
-            <h3>Momentos doces merecem ser inesquecíveis</h3>
-            <p>Bolos, doces e sobremesas feitos com amor para ocasiões especiais.</p>
+          <h3 class="project-title">Confeitaria</h3>
+          <div class="device-stage" aria-hidden="true">
+            <div class="mock-laptop"><div class="mock-laptop-screen"><img class="site-preview" src="https://image.thum.io/get/wait/8/width/1600/crop/950/https://portifolioconfeitaria.netlify.app/?portfolioPreview=20260814" alt="Captura real do projeto Confeitaria" loading="lazy"></div></div>
+            <div class="mock-phone"><div class="mock-phone-screen"><img class="site-preview" src="https://image.thum.io/get/wait/8/width/780/crop/1400/viewportWidth/390/https://portifolioconfeitaria.netlify.app/?portfolioMobile=20260814" alt="Captura real mobile do projeto Confeitaria" loading="lazy"></div></div>
           </div>
           <div class="project-meta">
-            <div class="project-type">♨ Confeitaria</div>
-            <a class="project-link" href="https://portifolioconfeitaria.netlify.app" target="_blank">Ver projeto ↗</a>
+            <a class="project-link" href="https://portifolioconfeitaria.netlify.app" target="_blank" rel="noopener">Confeitaria e Doces ↗</a>
           </div>
         </article>
 
         <article class="project reveal">
-          <div class="project-cover restaurant">
-            <span class="project-kicker">SABOR & BRASA</span>
-            <h3>O melhor sabor para o seu dia</h3>
-            <p>Pratos preparados com ingredientes frescos e muito sabor.</p>
+          <h3 class="project-title">Restaurante</h3>
+          <div class="device-stage" aria-hidden="true">
+            <div class="mock-laptop"><div class="mock-laptop-screen"><img class="site-preview" src="https://image.thum.io/get/wait/8/width/1600/crop/950/https://restauranteportifolio.netlify.app/?portfolioPreview=20260814" alt="Prévia do projeto Restaurante" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=1200&amp;q=88'"></div></div>
+            <div class="mock-phone"><div class="mock-phone-screen"><img class="site-preview" src="https://image.thum.io/get/wait/8/width/780/crop/1400/viewportWidth/390/https://restauranteportifolio.netlify.app/?portfolioMobile=20260814" alt="Prévia mobile do projeto Restaurante" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=700&amp;q=88'"></div></div>
           </div>
           <div class="project-meta">
-            <div class="project-type">◉ Restaurante</div>
-            <a class="project-link" href="https://restauranteportifolio.netlify.app" target="_blank">Ver projeto ↗</a>
+            <a class="project-link" href="https://restauranteportifolio.netlify.app" target="_blank" rel="noopener">Gastronomia ↗</a>
           </div>
         </article>
 
         <article class="project reveal">
-          <div class="project-cover manicure">
-            <span class="project-kicker">BELEZA & SOFISTICAÇÃO</span>
-            <h3>Unhas que traduzem sua personalidade</h3>
-            <p>Alongamento, cuidado e acabamento de alto nível em cada detalhe.</p>
+          <h3 class="project-title">Manicure</h3>
+          <div class="device-stage" aria-hidden="true">
+            <div class="mock-laptop"><div class="mock-laptop-screen"><img class="site-preview preview-text-bottom" src="https://image.thum.io/get/wait/8/width/1600/crop/1200/https://portifoliomanicure.netlify.app/?portfolioDesktopText=20260817" alt="Captura do projeto Manicure com texto completo" loading="lazy"></div></div>
+            <div class="mock-phone"><div class="mock-phone-screen"><img class="site-preview preview-focus" src="https://image.thum.io/get/wait/8/width/780/crop/1400/viewportWidth/390/https://portifoliomanicure.netlify.app/?portfolioMobile=20260816" alt="Captura proporcional mobile do projeto Manicure" loading="lazy"></div></div>
           </div>
           <div class="project-meta">
-            <div class="project-type">✦ Manicure</div>
-            <a class="project-link" href="https://portifoliomanicure.netlify.app" target="_blank" rel="noopener">Ver projeto ↗</a>
+            <a class="project-link" href="https://portifoliomanicure.netlify.app" target="_blank" rel="noopener">Beleza e Sofisticação ↗</a>
           </div>
         </article>
 
         <article class="project reveal">
-          <div class="project-cover dental">
-            <span class="project-kicker">SAÚDE & BEM-ESTAR</span>
-            <h3>Seu sorriso merece cuidado de verdade</h3>
-            <p>Odontologia humanizada, tecnologia e atendimento personalizado.</p>
+          <h3 class="project-title">Clínica Odontológica</h3>
+          <div class="device-stage" aria-hidden="true">
+            <div class="mock-laptop"><div class="mock-laptop-screen"><img class="site-preview" src="https://image.thum.io/get/wait/8/width/1600/crop/950/https://portifolioodonto.netlify.app/?portfolioPreview=20260814" alt="Prévia do projeto Clínica Odontológica" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&amp;fit=crop&amp;w=1200&amp;q=88'"></div></div>
+            <div class="mock-phone"><div class="mock-phone-screen"><img class="site-preview preview-left" src="https://image.thum.io/get/wait/8/width/1600/crop/950/https://portifolioodonto.netlify.app/?portfolioPhoneText=20260815" alt="Prévia mobile da área de texto da Clínica Odontológica" loading="lazy"></div></div>
           </div>
           <div class="project-meta">
-            <div class="project-type">✦ Clínica Odontológica</div>
-            <a class="project-link" href="https://portifolioodonto.netlify.app" target="_blank" rel="noopener">Ver projeto ↗</a>
+            <a class="project-link" href="https://portifolioodonto.netlify.app" target="_blank" rel="noopener">Saúde e Bem-estar ↗</a>
           </div>
         </article>
 
         <article class="project reveal">
-          <div class="project-cover advocacia">
-          <span class="project-kicker">ADVOCACIA & CONSULTORIA JURÍDICA</span>
-            <h3>Clareza para decidir com segurança</h3>
-            <p>Atendimento jurídico humanizado, transparente e comprometido.</p>
-            </div>
-
-            <div class="project-meta">
-            <div class="project-type">✦ Advocacia</div>
-            <a class="project-link" href="https://portifolioadvocacia.netlify.app"target="_blank" rel="noopener noreferrer">Ver projeto ↗</a>
-            </div>
-            </article>
+          <h3 class="project-title">Advocacia</h3>
+          <div class="device-stage" aria-hidden="true">
+            <div class="mock-laptop"><div class="mock-laptop-screen"><img class="site-preview preview-text-bottom" src="https://image.thum.io/get/wait/8/width/1600/crop/1200/https://portifolioadvocacia.netlify.app/?portfolioDesktopText=20260817" alt="Prévia do projeto Advocacia com texto completo" loading="lazy"></div></div>
+            <div class="mock-phone"><div class="mock-phone-screen"><img class="site-preview preview-focus" src="https://image.thum.io/get/wait/8/width/780/crop/1400/viewportWidth/390/https://portifolioadvocacia.netlify.app/?portfolioMobile=20260816" alt="Prévia proporcional mobile do projeto Advocacia" loading="lazy"></div></div>
+          </div>
+          <div class="project-meta">
+            <a class="project-link" href="https://portifolioadvocacia.netlify.app" target="_blank" rel="noopener noreferrer">Advocacia e Consultoria ↗</a>
+          </div>
+        </article>
       </div>
     </div>
   </section>
