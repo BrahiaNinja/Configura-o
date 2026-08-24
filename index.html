@@ -294,20 +294,20 @@
     }
     .project:hover{transform:translateY(-7px);box-shadow:0 24px 55px rgba(0,0,0,.4);border-color:rgba(168,63,255,.42)}
     .project-title{margin:0 0 22px;text-align:center;font-size:clamp(15px,1.35vw,19px);line-height:1.2;letter-spacing:.045em;text-transform:uppercase;color:#fff;font-weight:900}
-    .device-stage{height:210px;position:relative;margin:0 auto 23px;max-width:360px;overflow:visible;isolation:isolate}
-    .device-stage::before{content:"";position:absolute;width:76%;aspect-ratio:1;left:46%;top:53%;transform:translate(-50%,-50%);border:2px solid rgba(150,43,255,.48);border-radius:50%;box-shadow:0 0 55px rgba(136,36,255,.28),inset 0 0 35px rgba(136,36,255,.1);z-index:-1}
-    .device-stage::after{content:"";position:absolute;inset:20% 12% 8%;background:radial-gradient(circle,rgba(128,34,235,.3),transparent 66%);filter:blur(20px);z-index:-2}
-    .mock-laptop{position:absolute;left:48%;bottom:13px;transform:translateX(-52%);width:94%;height:188px;z-index:1;filter:drop-shadow(0 18px 18px rgba(0,0,0,.45))}
-    .mock-laptop-screen{position:absolute;inset:0 4.5% 15px;border:8px solid #25252d;border-bottom-width:11px;border-radius:14px 14px 4px 4px;background:#08080d;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
-    .mock-laptop::before{content:"";position:absolute;left:50%;bottom:11px;transform:translateX(-50%);width:11%;height:4px;border-radius:0 0 5px 5px;background:#44454d;z-index:2}
-    .mock-laptop::after{content:"";position:absolute;left:0;right:0;bottom:0;height:19px;border-radius:2px 2px 16px 16px;background:linear-gradient(180deg,#2b2c33 0%,#18191e 68%,#090a0d 100%);clip-path:polygon(3% 0,97% 0,100% 68%,97% 100%,3% 100%,0 68%)}
-    .mock-phone{position:absolute;right:-1%;bottom:2px;width:28%;height:158px;border:6px solid #292932;border-radius:22px;background:#17171d;padding:3px;z-index:3;transform:rotate(2deg);transform-origin:50% 100%;box-shadow:0 18px 26px rgba(0,0,0,.55)}
-    .mock-phone::before{content:"";position:absolute;top:4px;left:50%;transform:translateX(-50%);width:43%;height:8px;border-radius:0 0 10px 10px;background:#17171d;z-index:4}
-    .mock-phone-screen{height:100%;border-radius:17px;overflow:hidden;background:#08080d;box-shadow:inset 0 0 0 1px rgba(255,255,255,.06)}
-    .site-preview{display:block;width:100%;height:100%;object-fit:cover;object-position:top center;background:linear-gradient(135deg,#17111f,#2b123e);filter:saturate(1.04) contrast(1.03)}
-    .site-preview.preview-focus{object-fit:cover;object-position:center 58%}
-    .site-preview.preview-text-bottom{object-fit:cover;object-position:center bottom}
-    .site-preview.preview-left{object-fit:cover;object-position:top left}
+    .device-stage{height:226px;position:relative;margin:0 auto 25px;max-width:380px;overflow:visible;isolation:isolate}
+    .device-stage::before{content:"";position:absolute;width:74%;aspect-ratio:1;left:45%;top:50%;transform:translate(-50%,-50%);border:1px solid rgba(171,73,255,.55);border-radius:50%;background:radial-gradient(circle,rgba(143,43,235,.08),transparent 64%);box-shadow:0 0 58px rgba(136,36,255,.3),inset 0 0 34px rgba(136,36,255,.08);z-index:-1}
+    .device-stage::after{content:"";position:absolute;left:9%;right:6%;bottom:0;height:34px;background:radial-gradient(ellipse,rgba(0,0,0,.7),transparent 68%);filter:blur(7px);z-index:-2}
+    .mock-laptop{position:absolute;left:47%;bottom:16px;transform:translateX(-52%);width:92%;height:198px;z-index:1;filter:drop-shadow(0 20px 18px rgba(0,0,0,.48))}
+    .mock-laptop-screen{position:absolute;inset:0 4.5% 21px;border:7px solid #15161d;border-bottom-width:12px;border-radius:14px 14px 6px 6px;background:#08080d;overflow:hidden;box-shadow:0 0 0 1px rgba(255,255,255,.17),inset 0 0 0 1px rgba(255,255,255,.05)}
+    .mock-laptop-screen::before{content:"";position:absolute;top:2px;left:50%;width:3px;height:3px;transform:translateX(-50%);border-radius:50%;background:#4b4d59;box-shadow:0 0 0 1px #050509;z-index:4}
+    .mock-laptop::before{content:"";position:absolute;left:50%;bottom:17px;transform:translateX(-50%);width:15%;height:4px;border-radius:0 0 6px 6px;background:linear-gradient(180deg,#a5a6ad,#4a4b52);z-index:2}
+    .mock-laptop::after{content:"";position:absolute;left:0;right:0;bottom:0;height:22px;border-radius:2px 2px 16px 16px;background:linear-gradient(180deg,#686a72 0%,#2b2c33 24%,#15161b 72%,#08090c 100%);box-shadow:inset 0 1px rgba(255,255,255,.2);clip-path:polygon(3% 0,97% 0,100% 64%,97% 100%,3% 100%,0 64%)}
+    .mock-phone{position:absolute;right:-.5%;bottom:2px;width:29%;max-width:98px;height:174px;border:5px solid #14151c;border-radius:26px;background:#0b0c11;padding:2px;z-index:3;transform:none;box-shadow:0 20px 30px rgba(0,0,0,.62),0 0 0 1px rgba(255,255,255,.2),inset 0 0 0 1px rgba(255,255,255,.08)}
+    .mock-phone::before{content:"";position:absolute;top:4px;left:50%;transform:translateX(-50%);width:42%;height:10px;border-radius:0 0 10px 10px;background:#14151c;z-index:4}
+    .mock-phone::after{content:"";position:absolute;left:50%;bottom:5px;width:30%;height:3px;transform:translateX(-50%);border-radius:999px;background:rgba(255,255,255,.68);z-index:4}
+    .mock-phone-screen{position:relative;height:100%;border-radius:20px;overflow:hidden;background:#08080d;box-shadow:inset 0 0 0 1px rgba(255,255,255,.08)}
+    .site-preview{display:block;width:100%;height:100%;max-width:none;object-fit:cover;object-position:top center!important;background:linear-gradient(135deg,#17111f,#2b123e);filter:saturate(1.03) contrast(1.02);transform:translateZ(0)}
+    .system-mobile-preview{width:100%;height:100%;object-fit:cover;object-position:top center!important}
     .local-preview{position:relative;width:100%;height:100%;overflow:hidden;padding:13px 15px;color:#fff;font-family:"Manrope",sans-serif}
     .local-preview::before{content:"";position:absolute;width:54%;aspect-ratio:1;right:-8%;bottom:-32%;border-radius:50%;filter:blur(2px);opacity:.95}
     .preview-nav{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:7px}
@@ -531,7 +531,7 @@
       .hero-grid{grid-template-columns:1fr}.showcase{min-height:470px}
       .why-grid{grid-template-columns:1fr 1fr}
       .portfolio-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-      .project{padding:28px 20px 24px}.device-stage{height:230px;max-width:420px}.mock-laptop{height:205px}.mock-phone{height:170px}
+      .project{padding:28px 20px 24px}.device-stage{height:238px;max-width:420px}.mock-laptop{height:210px}.mock-phone{height:180px}
       .process-grid{grid-template-columns:1fr 1fr}.step:nth-child(2)::before{display:none}
       .faq-cta{grid-template-columns:1fr}.footer-grid{grid-template-columns:1fr 1fr}
       .review-card{flex-basis:calc((100% - 18px)/2)}
@@ -549,7 +549,7 @@
       .phone::before{width:42px;height:10px;top:5px}.phone .fake-page{padding:23px 10px 10px}
       .fake-hero h3{font-size:22px}.rocket-art{height:120px}.rocket-svg{width:105px}.phone .fake-hero h3{font-size:17px}
       .why-grid,.portfolio-grid,.process-grid,.footer-grid{grid-template-columns:1fr}
-      .project{padding:27px 18px 23px}.project-title{margin-bottom:22px}.device-stage{height:210px;max-width:400px}.mock-laptop{width:94%;height:188px;bottom:13px}.mock-laptop-screen{border-width:8px;border-bottom-width:11px}.mock-phone{right:-1%;bottom:2px;width:27%;height:158px;border-width:6px;border-radius:21px}.project-link{min-width:88%;font-size:14px}
+      .project{padding:27px 16px 23px}.project-title{margin-bottom:20px}.device-stage{height:clamp(208px,64vw,238px);max-width:400px}.mock-laptop{width:92%;height:clamp(184px,58vw,210px);bottom:16px}.mock-laptop-screen{border-width:6px;border-bottom-width:11px}.mock-phone{right:0;bottom:2px;width:28%;height:clamp(160px,48vw,180px);border-width:5px;border-radius:24px}.project-link{min-width:88%;font-size:14px}
       .why-bar{padding:64px 0}.why-item{min-height:136px}
       .step{display:grid;grid-template-columns:44px 48px 1fr;column-gap:10px;align-items:center;padding-left:0}
       .step::before{display:none}
@@ -787,8 +787,8 @@
         <article class="project reveal">
           <h3 class="project-title">Salão de Beleza</h3>
           <div class="device-stage" aria-hidden="true">
-            <div class="mock-laptop"><div class="mock-laptop-screen"><img class="site-preview" src="https://image.thum.io/get/wait/8/width/1600/crop/950/https://portifoliosalao.netlify.app/?portfolioPreview=20260814" alt="Prévia do projeto Salão de Beleza" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&amp;fit=crop&amp;w=1200&amp;q=88'"></div></div>
-            <div class="mock-phone"><div class="mock-phone-screen"><img class="site-preview" src="https://image.thum.io/get/wait/8/width/780/crop/1400/viewportWidth/390/https://portifoliosalao.netlify.app/?portfolioMobile=20260814" alt="Prévia mobile do projeto Salão de Beleza" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&amp;fit=crop&amp;w=700&amp;q=88'"></div></div>
+            <div class="mock-laptop"><div class="mock-laptop-screen"><img class="site-preview" src="assets/portfolio/salao-desktop.webp" alt="Prévia do projeto Salão de Beleza" loading="lazy" decoding="async"></div></div>
+            <div class="mock-phone"><div class="mock-phone-screen"><img class="site-preview" src="assets/portfolio/salao-mobile.webp" alt="Prévia mobile do projeto Salão de Beleza" loading="lazy" decoding="async"></div></div>
           </div>
           <div class="project-meta">
             <a class="project-link" href="https://portifoliosalao.netlify.app" target="_blank" rel="noopener">Beleza e Estilo ↗</a>
@@ -798,8 +798,8 @@
         <article class="project reveal">
           <h3 class="project-title">Confeitaria</h3>
           <div class="device-stage" aria-hidden="true">
-            <div class="mock-laptop"><div class="mock-laptop-screen"><img class="site-preview" src="https://image.thum.io/get/wait/8/width/1600/crop/950/https://portifolioconfeitaria.netlify.app/?portfolioPreview=20260814" alt="Captura real do projeto Confeitaria" loading="lazy"></div></div>
-            <div class="mock-phone"><div class="mock-phone-screen"><img class="site-preview" src="https://image.thum.io/get/wait/8/width/780/crop/1400/viewportWidth/390/https://portifolioconfeitaria.netlify.app/?portfolioMobile=20260814" alt="Captura real mobile do projeto Confeitaria" loading="lazy"></div></div>
+            <div class="mock-laptop"><div class="mock-laptop-screen"><img class="site-preview" src="assets/portfolio/confeitaria-desktop.webp" alt="Captura real do projeto Confeitaria" loading="lazy" decoding="async"></div></div>
+            <div class="mock-phone"><div class="mock-phone-screen"><img class="site-preview" src="assets/portfolio/confeitaria-mobile.webp" alt="Captura real mobile do projeto Confeitaria" loading="lazy" decoding="async"></div></div>
           </div>
           <div class="project-meta">
             <a class="project-link" href="https://portifolioconfeitaria.netlify.app" target="_blank" rel="noopener">Confeitaria e Doces ↗</a>
@@ -809,8 +809,8 @@
         <article class="project reveal">
           <h3 class="project-title">Restaurante</h3>
           <div class="device-stage" aria-hidden="true">
-            <div class="mock-laptop"><div class="mock-laptop-screen"><img class="site-preview" src="https://image.thum.io/get/wait/8/width/1600/crop/950/https://restauranteportifolio.netlify.app/?portfolioPreview=20260814" alt="Prévia do projeto Restaurante" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=1200&amp;q=88'"></div></div>
-            <div class="mock-phone"><div class="mock-phone-screen"><img class="site-preview" src="https://image.thum.io/get/wait/8/width/780/crop/1400/viewportWidth/390/https://restauranteportifolio.netlify.app/?portfolioMobile=20260814" alt="Prévia mobile do projeto Restaurante" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&amp;fit=crop&amp;w=700&amp;q=88'"></div></div>
+            <div class="mock-laptop"><div class="mock-laptop-screen"><img class="site-preview" src="assets/portfolio/restaurante-desktop.webp" alt="Prévia do projeto Restaurante" loading="lazy" decoding="async"></div></div>
+            <div class="mock-phone"><div class="mock-phone-screen"><img class="site-preview" src="assets/portfolio/restaurante-mobile.webp" alt="Prévia mobile do projeto Restaurante" loading="lazy" decoding="async"></div></div>
           </div>
           <div class="project-meta">
             <a class="project-link" href="https://restauranteportifolio.netlify.app" target="_blank" rel="noopener">Gastronomia ↗</a>
@@ -820,8 +820,8 @@
         <article class="project reveal">
           <h3 class="project-title">Manicure</h3>
           <div class="device-stage" aria-hidden="true">
-            <div class="mock-laptop"><div class="mock-laptop-screen"><img class="site-preview preview-text-bottom" src="https://image.thum.io/get/wait/8/width/1600/crop/1200/https://portifoliomanicure.netlify.app/?portfolioDesktopText=20260817" alt="Captura do projeto Manicure com texto completo" loading="lazy"></div></div>
-            <div class="mock-phone"><div class="mock-phone-screen"><img class="site-preview preview-focus" src="https://image.thum.io/get/wait/8/width/780/crop/1400/viewportWidth/390/https://portifoliomanicure.netlify.app/?portfolioMobile=20260816" alt="Captura proporcional mobile do projeto Manicure" loading="lazy"></div></div>
+            <div class="mock-laptop"><div class="mock-laptop-screen"><img class="site-preview" src="assets/portfolio/manicure-desktop.webp" alt="Captura do projeto Manicure" loading="lazy" decoding="async"></div></div>
+            <div class="mock-phone"><div class="mock-phone-screen"><img class="site-preview" src="assets/portfolio/manicure-mobile.webp" alt="Captura mobile do projeto Manicure" loading="lazy" decoding="async"></div></div>
           </div>
           <div class="project-meta">
             <a class="project-link" href="https://portifoliomanicure.netlify.app" target="_blank" rel="noopener">Beleza e Sofisticação ↗</a>
@@ -831,8 +831,8 @@
         <article class="project reveal">
           <h3 class="project-title">Clínica Odontológica</h3>
           <div class="device-stage" aria-hidden="true">
-            <div class="mock-laptop"><div class="mock-laptop-screen"><img class="site-preview" src="https://image.thum.io/get/wait/8/width/1600/crop/950/https://portifolioodonto.netlify.app/?portfolioPreview=20260814" alt="Prévia do projeto Clínica Odontológica" loading="lazy" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&amp;fit=crop&amp;w=1200&amp;q=88'"></div></div>
-            <div class="mock-phone"><div class="mock-phone-screen"><img class="site-preview preview-left" src="https://image.thum.io/get/wait/8/width/1600/crop/950/https://portifolioodonto.netlify.app/?portfolioPhoneText=20260815" alt="Prévia mobile da área de texto da Clínica Odontológica" loading="lazy"></div></div>
+            <div class="mock-laptop"><div class="mock-laptop-screen"><img class="site-preview" src="assets/portfolio/odonto-desktop.webp" alt="Prévia do projeto Clínica Odontológica" loading="lazy" decoding="async"></div></div>
+            <div class="mock-phone"><div class="mock-phone-screen"><img class="site-preview" src="assets/portfolio/odonto-mobile.webp" alt="Prévia mobile da Clínica Odontológica" loading="lazy" decoding="async"></div></div>
           </div>
           <div class="project-meta">
             <a class="project-link" href="https://portifolioodonto.netlify.app" target="_blank" rel="noopener">Saúde e Bem-estar ↗</a>
@@ -842,8 +842,8 @@
         <article class="project reveal">
           <h3 class="project-title">Advocacia</h3>
           <div class="device-stage" aria-hidden="true">
-            <div class="mock-laptop"><div class="mock-laptop-screen"><img class="site-preview preview-text-bottom" src="https://image.thum.io/get/wait/8/width/1600/crop/1200/https://portifolioadvocacia.netlify.app/?portfolioDesktopText=20260817" alt="Prévia do projeto Advocacia com texto completo" loading="lazy"></div></div>
-            <div class="mock-phone"><div class="mock-phone-screen"><img class="site-preview preview-focus" src="https://image.thum.io/get/wait/8/width/780/crop/1400/viewportWidth/390/https://portifolioadvocacia.netlify.app/?portfolioMobile=20260816" alt="Prévia proporcional mobile do projeto Advocacia" loading="lazy"></div></div>
+            <div class="mock-laptop"><div class="mock-laptop-screen"><img class="site-preview" src="assets/portfolio/advocacia-desktop.webp" alt="Prévia do projeto Advocacia" loading="lazy" decoding="async"></div></div>
+            <div class="mock-phone"><div class="mock-phone-screen"><img class="site-preview" src="assets/portfolio/advocacia-mobile.webp" alt="Prévia mobile do projeto Advocacia" loading="lazy" decoding="async"></div></div>
           </div>
           <div class="project-meta">
             <a class="project-link" href="https://portifolioadvocacia.netlify.app" target="_blank" rel="noopener noreferrer">Advocacia e Consultoria ↗</a>
